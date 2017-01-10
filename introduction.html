@@ -14,12 +14,21 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/styles.css" type="text/css" />
- 
+  <script> 
+    $(function(){
+      $("#includedContent").load("includes/side.html"); 
+    });
+    </script> 
+	 <script> 
+    $(function(){
+      $("#includedContent").load("includes/header.html"); 
+    });
+    </script> 
  </head>
  <body>
 
 
-	<?php include_once 'includes/header.php' ;?>
+	  <div id="includedContent"></div>
 
 	  <div class="container text-justify" style="margin-top: 6%;">
 
@@ -48,7 +57,7 @@
             </div>
 
             <!-- Blog Sidebar Widgets Column -->
-           <?php include 'includes/side.php'; ?>
+         <div id="includedContent"></div>
 
         </div>
         <!-- /.row -->
