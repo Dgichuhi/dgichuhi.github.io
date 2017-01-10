@@ -27,7 +27,8 @@
       <Link
         text="SAPUI5 Introduction"
         press="handleLinkPress"
-        href="introduction.php" />
+        href="introduction.html"
+	    target="_blank"/>
         <!--
         <Link text = "Graduated Tax Calculator in SAPU5"
           press="handleLinkPress"
@@ -35,7 +36,8 @@
           <Link
         text="SAPUI5 Data binding with demo"
         press="handleLinkPress"
-        href="data_bind.php" />
+        href="data_bind.html"
+		target="_blank"/>
 
         <Link 
           text="More coming... Call/Message"
