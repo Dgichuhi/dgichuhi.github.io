@@ -1,30 +1,70 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Hank Quinlan, Horrible Cop</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="css/css.css">
+	<style>
+#logo{
+height:40%; 
+        width:100%;
+        font-family:cursive,Arial,Sans-Serif;
+       
+        color:cyan;
+		text-transform:uppercase;
+        text-align:center;
+        font-weight:bold;
+        /*background: radial-gradient(white 5%, yellow 15%, green 60%);*/
+        line-height:2.4em;
+        background-image: url('images/ban1.jpg');
+       
+        background-repeat:no-repeat;
+		
+		}
+		#hh{
+			font-family: cursive;
+		}
+		.tile{
+			width: 50px;
+		}
+		
+</style>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
+
+		<title>Dosep Systems</title>
+
+		<script
+			id="sap-ui-bootstrap"
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-libs="sap.m,sap.ui.layout,sap.ui.commons,sap.ui.table" data-sap-ui-resourceroots='{
+				"sap.ui.demo.myFiori": "./"
+			}' >
+		</script>
+
+		<script>
+		var html =	'<template> ' +
+		'<div><h1>Dosep Systems Limited</h1><h3>Business Systems Developers</h3></div>' +
+		'</div>' +
+		'</template>';
+		
+		
+		var myView = sap.ui.view({id:"myView",viewContent:html, type:sap.ui.core.mvc.ViewType.HTML});
+				//myView.placeAt("logo");
+		
+			new sap.m.Shell({
+			app : new sap.ui.core.ComponentContainer({
+				name : "sap.ui.demo.myFiori"
+				})
+				}).placeAt("content");
+				
+				
+					
+				
+		</script>
+
 	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/cv">CV</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi there, I'm Hank Quinlan!</h1>
-				<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="mailto:hankquinlanhub@gmail.com">email</a></li>
-        		<li><a href="https://github.com/hankquinlan">github.com/hankquinlan</a></li>
-			</ul>
-		</footer>
+	<body class="sapUiBody">
+		<!--<div id="logo"></div>-->
+	<div id="content"></div>
+
 	</body>
 </html>
