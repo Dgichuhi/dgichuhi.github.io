@@ -23,6 +23,11 @@
                 "sap.ui.demo.myFiori": "./"
             }'>
         </script>
+	 <script> 
+    $(function(){
+      $("#includedContent").load("header.html"); 
+    });
+    </script> 
    <script type="text/javascript">
         //create the data
         
@@ -107,7 +112,7 @@
  <body>
 
 
-	<?php include_once 'includes/header.php';?>
+	<div id="includedContent"></div>
     <div id="container text-justify" style="margin: 4%; line-height: 2em;">
         <div class="row">
             <div class="col-md-12">
