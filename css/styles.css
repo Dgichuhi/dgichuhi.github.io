@@ -1,0 +1,115 @@
+body{
+ background-color:  #D2FAEB;
+}
+.well {
+    background: rgb(187, 251, 179);
+}
+
+
+.navbar-default {
+  background-color: #08e2f7;
+  border-color: #8e44ad;
+}
+.navbar-default .navbar-brand {
+  color: #101111;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #f71f07;
+}
+.navbar-default .navbar-text {
+  color: #101111;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #101111;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #f71f07;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #08e2f7;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #101111;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #0f07f9;
+  /*background-color: #8e44ad;*/
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #8e44ad;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #ecdbff;
+  background-color: #8e44ad;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ecdbff;
+  background-color: #8e44ad;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ecdbff;
+  background-color: #8e44ad;
+}
+.navbar-default .navbar-toggle {
+  border-color: #8e44ad;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #8e44ad;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #101111;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #101111;
+}
+.navbar-default .navbar-link {
+  color: #101111;
+}
+.navbar-default .navbar-link:hover {
+  color: #ecdbff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #101111;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #0f07f9;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #0f07f9;
+    background-color: #8e44ad;
+  }
+}
+
+.dp li{
+  text-shadow: 3px 2px 6px #020412;
+  font-size: 20pt;
+  list-style: none;
+}
+.pp, .dp p{
+  color: #333333; font-family: "Helvetica Neue",Arial,sans-serif; font-size: 16px; font-weight: 300; line-height: 1.5625; margin-bottom: 15px;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../images/ban.jpg) no-repeat center center;
+    background-size: cover;
+}
