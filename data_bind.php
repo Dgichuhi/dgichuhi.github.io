@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Data Binding in SAPUI5</title>
+<!--<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+ <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+<script id="sap-ui-bootstrap"
+           
+            src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" id="sap-ui-bootstrap"
+            data-sap-ui-theme="sap_bluecrystal"
+            data-sap-ui-libs="sap.m, sap.ui.layout"
+            data-sap-ui-resourceroots='{
+                "sap.ui.demo.myFiori": "./"
+            }'>
+        </script>
+   <script type="text/javascript">
+        //create the data
+        
+        //some JSON data
+        
+        var data = {
+        names:[
+        {fname: "Dominic", lname: "Doe", story: "Likes laughing"},
+        {fname: "Marian", lname: "Rose", story: "No comment"},
+        {fname: "Maxwell", lname: "Julius", story: "Can dance while running or run while dancing"},
+        {fname: "Helloo", lname: "Kenya", story: "Magical"},
+        {fname: "Nairobi", lname: "Kilimani", story: "Hah"},
+        
+        ]
+        }
+        //create a model with this data
+        
+        var model = new sap.ui.model.json.JSONModel();
+        model.setData(data);
+        //create the UI
+        
+        //create a list control
+        var list = new sap.m.List({headerText:"Names"});
+        //bind the list items to the data collection
+        list.bindItems({
+        path: "/names",
+        sorter: new sap.ui.model.Sorter("lastName"),
+        template : new sap.m.StandardListItem({
+        title: "{lname}",
+        description: "{story}",
+        icon: "images/ban.jpg",
+        type: sap.m.ListType.Navigation,
+        press: function(evt){
+        var oBindingContext = evt.getSource().getBindingContext();//evt.getSource() is the listItem
+        page2.setBindingContext(oBindingContext);//make sure the detail page has the correct data context
+        app.to("page2", "flip");
+        app.setBackgroundImage("images/rhino.jpeg");
+        }
+        })
+        });
+
+        //create the page holding the List
+        
+        var page1 = new sap.m.Page({
+        title: "Master or List Page",
+        content: list
+        });
+       
+        
+        //create the detail page
+        
+        var page2 = new sap.m.Page("page2", {
+        title: "Detail Page",
+        showNavButton:true,
+        navButtonPress: function(){
+        app.back();
+        },
+        content: [
+        new sap.ui.layout.form.SimpleForm({
+        title: "{fname} {lname}",
+        content: [
+        new sap.m.Label({text: "First Name"}),
+        new sap.m.Text({text: "{fname}"}),
+        new sap.m.Label({text: "Last Name"}),
+        new sap.m.Text({text: "{lname}"}),
+        new sap.m.Label({text: "More Info..."}),
+        new sap.m.Text({text: "{story}"})
+        ]
+        })
+        ]
+        });
+        
+        //create a mobile App holding the pages and place the App into the HTML document
+        var app = new sap.m.App({
+        pages: [page1,page2]
+        }).placeAt("content");
+        //set the model to the App; it will be propagated to the children
+        app.setModel(model);
+        </script>
+ 
+ </head>
+ <body>
+
+
+	<?php include_once 'includes/header.php';?>
+    <div id="container text-justify" style="margin: 4%; line-height: 2em;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Data Binding in SAPUI5</h2>
+                <p>In simple terms, data binding is the process of syncing two data sources or information. Changes made on one end are reflected on the other. Data binding exists in two forms. <strong>1. One way data binding </strong>-This is where data is carried to in one direction from the model through the instance where binding is taking place to the control such as a <code>sap.m.Text</code> or <code>sap.m.List</code>. <strong>2. Two-way binding </strong> - this is where changes in an UI5 control such as <code>sap.m.Input</code> results in changes to the data. Changes may originate from the user interacting with the application.</p>
+                <p>A <strong>model </strong> is a container for the data on which an application operates. Formats include:<UL><li>JavaScript Object Notation (JSON)</li>
+                <li>eXtensible Markup Language (XML) <p>The above two operate on the client side</p></li>
+                <li>OData - this is a server side model</li></UL></p>
+<p>The process of data binding for SAPUI5 comprises of:<ul>
+    <li>Deciding on the model</li>
+      <li>Creating a model</li>
+      <li>Binding the properties or lists to the model</li>
+
+
+</ul></p>
+<h3>Deciding the model</h3>
+<p>This depends on the service. Available models are JSON, XML and OData. </p>
+<h3>Defining the data.</h3>
+<p>We start by creating a HTML page, loading the SAPUI5 runtime after which we create the data to be bound. We use JSON model and hence our data is JSON format.</p>
+<p><pre><xmp>
+ <!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+    <title>Data Binding in SAPUI5</title>
+<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js" id="sap-ui-bootstrap" 
+data-sap-ui-libs="sap.m,sap.ui.layout" 
+ data-sap-ui-xx-bindingSyntax="complex" 
+ data-sap-ui-theme="sap_bluecrystal">
+ </script>
+<script type="text/javascript">
+     var our_data = {
+        names:[
+        {fname: "Dominic", lname: "Doe", story: "Likes laughing"},
+        {fname: "Marian", lname: "Rose", story: "No comment"},
+        {fname: "Maxwell", lname: "Julius", story: "Can dance while running or run while dancing"},
+        {fname: "Helloo", lname: "Kenya", story: "Magical"},
+        {fname: "Nairobi", lname: "Kilimani", story: "Hah"},
+        
+        ]
+        }
+</script>
+ </xmp></pre></p>
+ <h3>Creating a model and control instance</h3>
+ <p>We create a new JSON model (<code>sap.ui.model.json.JSONModel();</code>) and instantiate it with the data we have created above so that it is stored in this model for use in binding. </p>
+ <p><pre><xmp>
+     var model = new sap.ui.model.json.JSONModel();
+        model.setData(our_data);
+</xmp></pre></p>
+<h3>Creating controls and binding</h3>
+<p>We create a list control - <code>sap.m.List</code> - and then we bind the list items to the data collection we have defined in the model above.</p>
+<p><pre><xmp>
+    var list = new sap.m.List({headerText:"Data Binding Sample"});
+    list.bindItems({
+        path: "/names",
+        sorter: new sap.ui.model.Sorter("lname"),
+        template : new sap.m.StandardListItem({
+        title: "{lname}",
+        description: "{story}",
+        type: sap.m.ListType.Navigation,
+        
+</xmp></pre></p>
+<p>We have specified our list items will be used to navigate to another page through which more details will be displayed. We use <code>type: sap.m.ListType.Navigation </code> to make navigation possible with the help of click event which is handled by the function below. </p>
+<p><pre><xmp>
+    press: function(evt){
+    var oBindingContext = evt.getSource().getBindingContext();
+    page2.setBindingContext(oBindingContext);
+    app.to("page2");
+    }
+    })
+        });
+</xmp></pre></p>
+<p>In the function above, we declare a binding context. The List item that has been clicked is accessed by the <code>evt.getSource().getBindingContext()</code> which returns the <code>sap.m.StandardListItem</code> that has been clicked. We use it to pass the information of the clicked to the next page (detail) page with the help of <code>page2.setBindingContext(oBindingContext);</code> so that that same item can be displayed there.</p>
+<p>We create the page holding the list.</p>
+<p><pre><xmp>
+    var page1 = new sap.m.Page({
+        title: "List Page",
+        content: list
+        });
+</xmp></pre></p>
+<p>We create the detail page to display further information received upon the triggering of the click event</p>
+<p><pre><xmp>
+   var page2 = new sap.m.Page("page2", {
+        title: "Detail Page",
+        showNavButton:true,
+        navButtonPress: function(){
+        app.back();
+        },
+        content: [
+        new sap.ui.layout.form.SimpleForm({
+        title: "{fname} {lname}",
+        content: [
+        new sap.m.Label({text: "First Name"}),
+        new sap.m.Text({text: "{fname}"}),
+        new sap.m.Label({text: "Last Name"}),
+        new sap.m.Text({text: "{lname}"}),
+        new sap.m.Label({text: "More Info..."}),
+        new sap.m.Text({text: "{story}"})
+        ]
+        })
+        ]
+        }); 
+</xmp></pre></p>
+<p>Finally, we create an App through <code>sap.m.App. </code>This is the root element of a UI5 application and provides Navigation. We then place the app in the  HTML document. </p>
+<p><pre><xmp>
+    var app = new sap.m.App({
+        pages: [page1,page2]
+        }).placeAt("content");
+         app.setModel(model);
+        </script>
+        </head>
+        <body id = "content" class = "sapUiBody">
+        </body>
+        </html>
+</xmp></pre></p>
+<p>We set the model to the App, i.e. <code>app.setModel(model) </code> for it to be propagated to other aggregate child controls.</p>
+
+<h2>The Demo</h2>
+
+
+
+            </div>
+        </div>
+    </div>
+
+     <div class="container" style="margin-top: 4%; height:400px;">
+       
+            <div id="content" class="sapUiBody col-md-6" style="height:400px;"></div>
+            </div>
+     
+	  <div class="container" style="margin-top: 2%;">
+        <div class="row">          
+            <div class="col-md-8">
+            <div class="intro-header">
+ <div class="intro-message">
+                        <h1>Dosep</h1>
+                        <h3>SAPUI5 Prodigy</h3>
+                     </div>
+               
+            </div>
+            
+ </div>
+            <!-- Blog Sidebar Widgets Column -->
+           <?php include 'includes/side.php'; ?>
+
+       
+        <!-- /.row -->
+
+        </div>
+        </div>
+
+
+        <hr>
+
+      <!--  <div id="disqus_thread" class="container" style="margin: 4%;"></div>-->
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+        
+        s.src = '//Dosep.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+        
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+        <!-- Footer -->
+        <footer style="height: 100px;">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p style="padding-top: 20px;">Copyright &copy; Dosep 2016</p>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    </body>
+    </html>

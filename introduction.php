@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dosep</title>
+<!--<link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=0.41, maximum-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css" type="text/css" />
+ 
+ </head>
+ <body>
+
+
+	<?php include_once 'includes/header.php' ;?>
+
+	  <div class="container text-justify" style="margin-top: 6%;">
+
+        <div class="row">
+            <div class="col-md-8">
+            <h1>INTRODUCTION</h1>
+<p class="pp">SAPUI5 is a User Interface technology used to build SAP Fiori and Fiori-like applications. SAPUI5 stands for SAP User Interface for HTML5. It contains a large collection of libraries which support JavaScript for client side features, CSS3 for styling, jQuery and Open Ajax. SAP Fiori is a User Experience (UX) concept for SAP software and applications. It is used to provide a personalized and role-based UX for enterprise applications accross a wide range of business sectors. The design philosophy of SAP Fiori is based on five core principles. SAP Fiori user experience is role-based, adaptive, simple, coherent, and delightful. </p>
+<p class="pp">
+    Applications built with SAPUI5 are responsive across browsers and devices – they run on smartphones, tablets, and desktops. The UI controls automatically adapt themselves to the capabilities of each device.
+</p>
+<h2 class="text-center">Design Principles</h2>
+<ol class="dp">
+    <li>ROLE-BASED</li>
+    <p>SAP Fiori is designed for your business, your needs, and how you work. It draws from our broad insights on the multifaceted roles of today’s workforce. SAP Fiori provides the right information at the right time and reflects the way you actually work.</p>
+    <li>DELIGHTFUL</li>
+    <p>Apart from making you work smarter, SAP Fiori also enriches your work experience by allowing you to simply do your job.</p>
+    <li>COHERENT</li>
+    <p>Whether you fulfill a sales order, review your latest KPIs, or manage leave requests – SAP Fiori adheres to a consistent interaction and visual design language. Across the enterprise, you enjoy the same intuitive and consistent experience.</p>
+    <li>SIMPLE</li>
+    <p>With SAP Fiori, you can complete your job intuitively and quickly. SAP Fiori helps you focus on what is important – essential functions are easy to use and you can personalize the experience to focus on your relevant tasks and activities.</p>
+    <li>ADAPTIVE</li>
+    <p>SAP Fiori enables you to work how and where you want, regardless of the device you use. And, it provides relevant information that allows for instant insight.</p>
+    Source: <a href="https://experience.sap.com/fiori-design-web/design-principles/">SAP User Experience Community  </a>
+</ol>
+               
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+           <?php include 'includes/side.php'; ?>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Dosep 2016</p>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    </body>
+    </html>
