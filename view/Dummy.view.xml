@@ -1,4 +1,6 @@
 <core:View
+	   
+	   controllerName="sap.ui.demo.myFiori.view.Detail"
 xmlns="sap.m"
 xmlns:mvc="sap.ui.core.mvc"
 xmlns:core="sap.ui.core" >
