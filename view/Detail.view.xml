@@ -1,0 +1,74 @@
+<core:View
+	
+	xmlns="sap.m"
+	
+		xmlns:core="sap.ui.core"
+		
+	xmlns:l="sap.ui.layout"
+	controllerName="sap.ui.demo.myFiori.view.Detail"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" >
+	<App>
+		<pages>
+	<Page
+		title="You are Here!"
+		showNavButton="true"
+		navButtonPress="handleNavButtonPress" >
+
+					<l:Grid defaultSpan="L6 M6 S12" defaultIndent="L0 M0 S0" containerQuery="true">
+						<l:content>
+							
+								
+								<VBox class="sapUiLargeMargin">
+		<FormattedText
+			htmlText='&lt;h1 style="font-family:cursive;" &gt;Dosep Systems&lt;/h1&gt;
+				&lt;p style="color:green; font-weight:600; text-align:justify;line-height:2em;"&gt;
+				At Dosep, we take pride in delivering timeless systems and business tools that ensure real time data is generated and used to make decisions within the shortest time possible. With our extensive knowledge and expertise in data analysis, we produce business tools that allow you to save and dedicate time to other important tasks while at the same time being able to monitor your business performance effortlessly and regardless of your location. 
+				&lt;/p&gt;'/>
+				<Image src="images/giphy.gif"/>
+<FormattedText
+			htmlText='
+				&lt;p style="font-weight:600;" &gt;Meanwhile as we wait for our horse to bring coffee, you can contact us through:&lt;/p&gt;&lt;p style="text-align:center;"&gt; &lt;span &gt; &lt;strong&gt;+254 702 495 991&lt;/strong&gt; &lt;br&gt; &lt;strong&gt;gmail.com&lt;/strong&gt;.&lt;/span&gt;&lt;/p&gt;
+				'/>
+	</VBox>
+								
+							
+								
+							
+						
+							<!-- Results -->
+
+							<List headerText="Some of the Features Our Systems Possess: " backgroundDesign="Solid">
+								<ObjectListItem icon="sap-icon://money-bills" title="Monitor Your Income Effortlessly" number="10005600" numberUnit="USD"
+									numberState="Success"></ObjectListItem>
+								<ObjectListItem icon="sap-icon://commission-check" title="Quickly Check Activities" number="106" numberUnit="Business Deals" numberState="Error"></ObjectListItem>
+								<ObjectListItem id="idListItemUS" class="noborder" icon="sap-icon://waiver" title="View Payments Made" number="28938"
+									numberUnit="USD" numberState="Neutral"/>
+								<StandardListItem id="idListItem18" class="noborder" title="Diary" icon="sap-icon://check-availability"   info="Healthy" infoState="Success"></StandardListItem>
+								
+								<ObjectListItem id="idListItem32" class="noborder" title="Clients" icon="sap-icon://citizen-connect" number = "873843" numberUnit="Clients" numberState="Success"></ObjectListItem>
+								<ObjectListItem class="noborder bordertop" icon="sap-icon://building" title="Offices"
+									number="33" numberUnit="Offices" numberState="Error"/>
+								
+								<ObjectListItem class="noborder" icon="sap-icon://unpaid-leave" title="Loans Outstanding" number="567431" numberUnit="USD"
+									numberState="Warning"></ObjectListItem>
+							</List>
+						</l:content>
+					</l:Grid>
+	
+	
+
+ <footer>
+            <OverflowToolbar id="otbFooteEr">
+                <ToolbarSpacer/>
+               
+ 
+            </OverflowToolbar>
+    </footer>   
+		
+			
+	</Page>
+</pages>
+</App>
+</core:View>

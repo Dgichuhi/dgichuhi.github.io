@@ -1,0 +1,67 @@
+<core:View
+	controllerName="sap.ui.demo.myFiori.view.Master"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core" >
+	<Page
+		title="Browse Below" >
+		<!--<subHeader>
+<Bar>
+<contentLeft>
+<SearchField
+search="handleSearch"
+width="100%" >
+</SearchField>
+</contentLeft>
+</Bar>
+</subHeader>-->
+		<List>
+			<ObjectListItem title = "Welcome"
+					type="Active"
+					icon="sap-icon://addresses"
+				press="handleListItemPress"
+				>
+				
+				</ObjectListItem>
+					<ObjectListItem title = "Apps"
+					type="Active"
+					icon="sap-icon://laptop"
+				press="handleListItemPress1"
+				>
+				
+				</ObjectListItem>
+				<ObjectListItem title = "Blogs"
+					type="Active"
+					icon="sap-icon://pdf-reader"
+				press="handleListItemPress2"
+				>
+				
+				</ObjectListItem>
+				<ObjectListItem title = "Contact Us"
+					type="Active"
+					icon="sap-icon://phone"
+				press="handleListItemPress3"
+				
+				>
+				<firstStatus>
+					<ObjectStatus
+						text="gichuhimd@gmail.com" />
+					</firstStatus>
+					<attributes>
+					<ObjectAttribute text="+254 702 495 991" />
+				</attributes>
+					
+				
+				</ObjectListItem>
+				
+				
+		</List>
+		 <footer>
+            <OverflowToolbar id="otbFooteErW">
+                <ToolbarSpacer/>
+               
+ 
+            </OverflowToolbar>
+    </footer>   
+	</Page>
+
+</core:View>

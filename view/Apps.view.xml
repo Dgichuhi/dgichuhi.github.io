@@ -1,0 +1,154 @@
+<core:View
+	
+	
+
+	xmlns="sap.m"
+	xmlns:viz="sap.viz.ui5.controls"
+        xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+        xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:core="sap.ui.core"
+		
+	xmlns:l="sap.ui.layout"
+	controllerName="sap.ui.demo.myFiori.view.Apps"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+
+	
+
+	displayBlock="true" >
+	<App>
+		<pages>
+	<Page enableScrolling="true"
+		title="You are Here! View Apps"
+		showNavButton="true"
+		navButtonPress="handleNavButtonPress" >
+			<l:Grid defaultSpan="L6 M6 S12" defaultIndent="L0 M0 S0" containerQuery="true">
+
+						<l:content>
+							
+								
+								<VBox class="sapUiLargeMargin">
+		<FormattedText
+			htmlText='&lt;h1 style="font-family:cursive;" &gt;Our Apps&lt;/h1&gt;
+				&lt;p style="color:green; font-weight:600; text-align:justify;line-height:2em;"&gt;
+				We show you samples of the kind of applications we make. Every minute at Dosep is spent caring for the customer through provision of systems that are focused on enhancing user experience while fulfilling the needs of the user and their business objectives. Considering that their are online based, access to information is not limited to location. Whether you are on a business trip or sun-bathing at the coast, you will have no worries about the activities sorrounding your organization. 
+				&lt;/p&gt;'/>
+				<Image src="images/giphy.gif"/>
+<FormattedText
+			htmlText='
+				&lt;p style="font-weight:600;" &gt;Meanwhile as we wait for our horse to bring coffee, you can contact us through:&lt;/p&gt;&lt;p style="text-align:center;"&gt; &lt;span &gt; &lt;strong&gt;+254 702 495 991&lt;/strong&gt; &lt;br&gt; &lt;strong&gt;gmail.com&lt;/strong&gt;.&lt;/span&gt;&lt;/p&gt;
+				'/>
+	</VBox>
+								
+							
+								
+							
+						
+							<!-- Results -->
+
+							<Panel expandable="true" expanded="true"  headerText="Sample system. Have a look:" width="auto" class="sapUiResponsiveMargin" >
+
+	<Link 
+		text="Fiori like bills management system"
+		href="bills/webapp"
+		target="_blank" />
+
+								
+							</Panel>
+			<FormattedText
+			htmlText='&lt;h3 style="font-family:cursive;" &gt;Dashboard - Tile based&lt;/h3&gt;'/>			
+
+	<ScrollContainer>
+
+			<StandardTile
+				icon="sap-icon://group"
+				
+				number="156232"
+				numberUnit="clients"
+				title="Current Clients"
+				info="30 added"
+				infoState="Success"
+				 />
+				
+			<StandardTile
+				icon="sap-icon://vehicle-repair"
+				
+				number="11"
+				numberUnit="Cars"
+				title="Broken Company Cars"
+				info="2 disposed"
+				infoState="Error"
+				 />
+				 <StandardTile
+				icon="sap-icon://vehicle-repair"
+				
+				number="11"
+				numberUnit="Cars"
+				title="Broken Company Cars"
+				info="2 disposed"
+				infoState="Error"
+				 />
+
+			<StandardTile
+				icon="sap-icon://group"
+				
+				number="156232"
+				numberUnit="clients"
+				title="Current Clients"
+				info="30 added"
+				infoState="Success"
+				 />
+				
+			
+	</ScrollContainer>
+
+	
+
+								
+							
+						</l:content>
+					</l:Grid>
+					<Panel headerText="Graph by Dosep" expandable="true" expanded="true" width="auto" class="sapUiResponsiveMargin">
+						<viz:VizFrame xmlns:viz="sap.viz.ui5.controls" id="lineChartCard" uiConfig="{applicationSet:'fiori'}" vizType="stacked_column" width="100%">
+						<viz:dataset>
+							<dataSet:FlattenedDataset xmlns:dataSet="sap.viz.ui5.data" data="{/SalesShare}">
+								<dataSet:dimensions>
+									
+										<dataSet:DimensionDefinition name="Date" value="{Date}">
+										</dataSet:DimensionDefinition>
+									
+								</dataSet:dimensions>
+								<dataSet:measures>
+									
+										
+									
+										<dataSet:MeasureDefinition name="Profit" value="{Profit}">
+										</dataSet:MeasureDefinition>
+										<dataSet:MeasureDefinition name="Price" value="{Price}">
+										</dataSet:MeasureDefinition>
+									
+								</dataSet:measures>
+							</dataSet:FlattenedDataset>
+						</viz:dataset>
+						<viz:feeds>
+							<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Profit,Price"/>
+							<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="categoryAxis" type="Dimension" values="Date"/>
+							
+						</viz:feeds>
+					</viz:VizFrame>
+						
+					</Panel>
+	
+	<footer>
+            <OverflowToolbar id="ottsbFooteEr">
+                <ToolbarSpacer/>
+               
+ 
+            </OverflowToolbar>
+    </footer>   
+		
+			
+	</Page>
+</pages>
+</App>
+</core:View>
