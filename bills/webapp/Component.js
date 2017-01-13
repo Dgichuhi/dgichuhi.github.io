@@ -81,17 +81,14 @@ sap.ui.define([
 			viewData : { component : this }
 		});
 		
-		var oModel = new sap.ui.model.json.JSONModel("http://localhost/ui/bills/webapp/jsonlive.php");
+		var oModel = new sap.ui.model.json.JSONModel("model/data1.json");
 		oView.setModel(oModel);
-		//var oModel22 = new sap.ui.model.json.JSONModel("http://localhost/mycase/webapp/jsondiaryselect.php");
-		//oView.setModel(oModel22,"dia");
+		
 		var i18nModel = new sap.ui.model.resource.ResourceModel({
             bundleName: "sap.ui.webapp.i18n.i18n"
          });
 		oView.setModel(i18nModel, "i18n");
-		//var oModel1 = new sap.ui.model.json.JSONModel("http://localhost/mycase/webapp/jsondatalive.php");
-			 //var oModel1 = new sap.ui.model.json.JSONModel("http://localhost/mycase/webapp/jsoncaselive.php");
-		//oView.setModel(oModel1,"mod");
+		
 			
 		return oView;
 			},
