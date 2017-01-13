@@ -29,9 +29,9 @@ _handleRouteMatched: function(evt) {
 
 
 onButtonPress: function(evt){
-  var x = new control.SpeechRecognitionInputControl();
-  var oLayout = this.getView().byId("thisPage");
-      oLayout.addContent(x);
+  //var x = new control.SpeechRecognitionInputControl();
+ // var oLayout = this.getView().byId("thisPage");
+   //   oLayout.addContent(x);
   },
 
 
