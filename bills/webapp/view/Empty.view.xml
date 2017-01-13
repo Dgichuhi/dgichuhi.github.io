@@ -1,0 +1,116 @@
+<core:View
+
+controllerName="sap.ui.webapp.controller.Detail"
+xmlns="sap.m"
+xmlns:l="sap.ui.layout"
+xmlns:html="http://www.w3.org/1999/xhtml"
+xmlns:custom="control"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:unified="sap.ui.unified"
+xmlns:core="sap.ui.core" >
+<Page title="{i18n>welcomeTitle}">
+
+	<MessagePage
+		title="Bills Management System"
+		text="Welcome"
+		icon="../../images/logo.JPG"
+		description="View and Collect bills from your customers effortlessly"
+
+		/>
+		<!--<IconTabBar
+			expanded="{device>/isNoPhone}" >
+			<items>
+
+<IconTabFilter text = "Clients and their Lawyers" design="Horizontal"
+					icon="sap-icon://add-coursebook">
+
+					<List
+		id="ShortProductList1"
+		
+		items="{/contacts}">
+		<items>
+			<ObjectListItem
+			icon="images/WEW.png"
+			type="Active"
+				press="handleListItemPress"
+				title="{firstname} {surname}"
+				number="{totalcashexpected}"
+				numberUnit="KES Remaining"
+				description = "{note}"
+				
+				>
+				<firstStatus>
+				<ObjectStatus text="{clientno}"/>
+					</firstStatus>
+					<attributes>
+					<ObjectAttribute text="{note}" />
+				</attributes>
+				</ObjectListItem>
+		</items>
+	</List>
+							
+	
+				</IconTabFilter>
+				<IconTabSeparator icon="sap-icon://vertical-grip"/>
+
+				<IconTabFilter text = "Add Client"
+					icon="sap-icon://add-coursebook">-->
+							
+<!--	<mvc:JSView id="myJSView" viewName="sap.ui.webapp.view.Lawyersclient" /> 
+
+
+
+				</IconTabFilter>
+				<IconTabSeparator icon="sap-icon://vertical-grip"/>-->
+				<!--<IconTabFilter text = "{i18n>SpeechtoText}"
+					icon="sap-icon://microphone" iconColor="Critical">
+							
+	<custom:SpeechRecognitionInputControl width="70%" id="spoken1"></custom:SpeechRecognitionInputControl>
+
+
+
+				</IconTabFilter>
+				<IconTabSeparator icon="sap-icon://process"/>-->
+			<!--
+			<IconTabFilter text = "{i18n>YourInfo}"
+					icon="sap-icon://message-error">	
+<HBox>
+					<Text text="{i18n>TotalCashExpected} {amount}" />
+				</HBox>
+				<HBox>
+					<Text text="{i18n>lastcase} {date}"/>
+				</HBox><HBox>
+					<Text text="{i18n>reason} {reason}"/>
+				</HBox>
+						
+				
+				</IconTabFilter>
+
+
+				
+				
+
+			</items>
+		</IconTabBar>
+-->
+		 <footer>
+            <OverflowToolbar id="otbFooter">
+                <ToolbarSpacer/>
+                <Button type="Accept" icon="sap-icon://accept" text="Hire Us" press="onMessageDialogPress">
+                    <layoutData><OverflowToolbarLayoutData moveToOverflow="false" /></layoutData>
+                </Button>
+                <!--
+                <Button type="Reject" text="Reject">
+                    <layoutData><OverflowToolbarLayoutData moveToOverflow="false" /></layoutData>
+                </Button>
+                 <OverflowToolbarButton text="Edit" icon="sap-icon://edit"/>
+                <OverflowToolbarButton text="Add" icon="sap-icon://add"/>
+                <OverflowToolbarButton text="Favorite" icon="sap-icon://favorite"/>
+                <OverflowToolbarButton text="Flag" icon="sap-icon://flag"/>
+              -->
+ 
+            </OverflowToolbar>
+    </footer>   
+
+</Page>
+</core:View>

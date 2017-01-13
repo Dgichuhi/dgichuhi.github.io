@@ -1,0 +1,51 @@
+<mvc:View
+	controllerName="sap.ui.webapp.controller.Master"
+	xmlns="sap.m"
+		xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>masterTitle}">
+				<subHeader>
+			<Bar>
+				<contentLeft>
+					<SearchField
+						search="handleSearch"
+						width="100%" >
+					</SearchField>
+				</contentLeft>
+			</Bar>
+		</subHeader>
+		
+			<List
+		id="ShortProductList"
+		headerText="{i18n>masterTitle2}"
+		items="{/contacts}">
+		<items>
+			<ObjectListItem
+			icon="images/WEW.png"
+			type="Active"
+				press="handleListItemPress"
+				title="{firstname} {surname}"
+				number="{totalcashexpected}"
+				numberUnit="USD"
+				numberState="{= ${totalcashexpected} > 350001 ? 'Error' : 'Success' }"
+				description = "{note}"
+				
+				>
+				<firstStatus>
+				<ObjectStatus text="{clientno}"/>
+					</firstStatus>
+					<attributes>
+					<ObjectAttribute text="{note}" />
+				</attributes>
+				</ObjectListItem>
+		</items>
+	</List>
+		
+		
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

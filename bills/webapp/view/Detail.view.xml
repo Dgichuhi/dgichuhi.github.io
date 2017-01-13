@@ -1,0 +1,249 @@
+<mvc:View
+	controllerName="sap.ui.webapp.controller.Detail"
+	xmlns="sap.m"
+	xmlns:custom="control"
+		xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true">
+	<App>
+		<pages>
+			<Page title="{i18n>detailTitle}"
+			showNavButton="true"
+		navButtonPress="handleNavButtonPress" >
+		 <headerContent>
+		        <Button
+                icon="sap-icon://sys-help-2"
+                press="handleNavToInfo" />
+  </headerContent>
+  
+  
+  
+		<ObjectHeader
+		
+			title="{note}"
+			number=""
+			numberUnit="" >
+			<attributes>
+				<ObjectAttribute text="{firstname} {secondname} - {clientno}" />
+				
+			</attributes>
+			
+			
+		</ObjectHeader>
+											
+							<IconTabBar
+			expanded="{device>/isNoPhone}" >
+			<items>
+				
+
+				<IconTabSeparator icon="sap-icon://vertical-grip"/>
+				<IconTabFilter text = "{i18n>Notes}"
+					icon="sap-icon://write-new">
+					
+															
+					
+					<!--<mvc:JSView id="myJSView2" viewName="sap.ui.webapp.view.Editor" />-->
+
+					<VBox class="sapUiSmallMargin">
+						<Text text="Update bills for {firstname} {secondname} {surname}"/>
+		<f:SimpleForm id="SimpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout" >
+						<f:content>
+				
+				<Label text="Client No" />
+				<Input value="{clientno}" editable="false" />
+				<Label text="Amount" />
+				<Input value="" />
+				
+				
+				<Label text="Date" />
+				<DatePicker dateValue="{/date}"/>
+				<Label text="Accountant" />
+				<Select width="100%">
+					<items>
+						<core:Item text="Jennifer" />
+						<core:Item text="Chris" />
+						<core:Item text="Esther" />
+						<core:Item text="Doe" />
+					</items>
+				</Select>
+					<Label text="" />
+					<SegmentedButton selectedKey="s"  class="sapUiSmallMarginBottom">
+					<items>
+						<SegmentedButtonItem icon="sap-icon://save" text="Save" press = "onMessageErrorDialogPress" key="s"/>
+						<SegmentedButtonItem icon="sap-icon://reset" text="Clear" />
+						
+					</items>
+				</SegmentedButton>
+					
+					
+				
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+
+					
+				</IconTabFilter>
+				<IconTabSeparator icon="sap-icon://vertical-grip"/>
+				<IconTabFilter text = "{i18n>ViewBills}" iconColor="Positive"
+					icon="sap-icon://goalseek" count="{clients/0/count}">
+						<Table id="feeds" items = "{clients}"
+			headerText="Client - {firstname} {secondname} {surname}">
+			<columns>
+				
+				<Column
+					 >
+					<header><Label text="{i18n>Date}" /></header>
+				</Column>
+				<Column minScreenWidth="Tablet"
+					demandPopin="true"
+					hAlign="Center">
+					<header><Label text="{i18n>Amount} (USD)" /></header>
+				</Column>
+				
+				
+			</columns>
+			<ColumnListItem type="Navigation"
+				press="changeTohandleLineItemPress" >
+				<cells>
+					<Text
+						text="{date}"/>
+
+					<Text
+						text="{amount}" />
+					
+					
+					</cells>
+			</ColumnListItem>
+		</Table>
+					
+				</IconTabFilter>
+<!--
+<IconTabFilter text = "View Bills" iconColor="Positive"
+					icon="sap-icon://loan">
+						<Table id="feeds1" items = "{clients}"
+			headerText="{i18n>totalbills} {firstname} {secondname} {surname}">
+			<columns>
+				<Column>
+					<header><Label text="{i18n>Amount}" /></header>
+				</Column>
+			
+				<Column
+					minScreenWidth="Tablet"
+					demandPopin="true"
+					hAlign="Center" >
+					<header><Label text="{i18n>reason}" /></header>
+				</Column>
+				
+			</columns>
+			<ColumnListItem type="Navigation"
+				press="handleLineItemPress" >
+				<cells>
+					<Text
+						text="{amount}" />
+					
+					<Text
+						text="{reason}"/>
+					</cells>
+			</ColumnListItem>
+		</Table>
+		<Text
+						text="{aamount}"/>
+					
+				</IconTabFilter>-->
+
+				<IconTabSeparator icon="sap-icon://vertical-grip"/>
+				<!--<IconTabFilter text = "{i18n>SpeechtoText}"
+					icon="sap-icon://microphone">
+							
+	<custom:SpeechRecognitionInputControl width="70%" id="spoken1"></custom:SpeechRecognitionInputControl>
+
+
+
+				</IconTabFilter>
+								
+				<IconTabSeparator icon="sap-icon://vertical-grip"/>-->
+				<IconTabFilter text = "Send Email"
+					icon="sap-icon://email">
+							
+
+<!--<mvc:JSView id="myJSView1" viewName="sap.ui.webapp.view.Email" />-->
+
+
+<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimmpleFormToolbar"
+			editable="true"
+			layout="ResponsiveGridLayout" >
+						<f:content>
+				
+				<Label text="Email" />
+				<Input value="{email}" editable="false" />
+				<Label text="Subject" />
+				<Input value="" />
+
+				<Label text="Message" />
+				<TextArea value="" rows="8" />
+				
+				
+				
+					<Label text="" />
+					<SegmentedButton selectedKey="ss"  class="sapUiSmallMarginBottom">
+					<items>
+						<SegmentedButtonItem icon="sap-icon://save" text="Send" press = "onMessageErrorDialogPress" key="ss"/>
+						<SegmentedButtonItem icon="sap-icon://reset" text="Clear" />
+						
+					</items>
+				</SegmentedButton>
+					
+					
+				
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+
+
+
+
+
+
+
+
+				</IconTabFilter>
+				<IconTabSeparator icon="sap-icon://vertical-grip"/>
+				<IconTabFilter text = "Add Client"
+					icon="sap-icon://add-coursebook">
+							
+<!--	<mvc:JSView id="myJSView" viewName="sap.ui.webapp.view.Lawyersclient" /> -->
+
+
+
+				</IconTabFilter>
+				<IconTabSeparator icon="sap-icon://vertical-grip"/>
+			</items>
+		</IconTabBar>
+		 <footer>
+            <OverflowToolbar id="otbFooter">
+                <ToolbarSpacer/>
+                <Button type="Accept" icon="sap-icon://accept" text="Hire Us" press="onMessageDialogPress">
+                    <layoutData><OverflowToolbarLayoutData moveToOverflow="false" /></layoutData>
+                </Button>
+                <!--
+                <Button type="Reject" text="Reject">
+                    <layoutData><OverflowToolbarLayoutData moveToOverflow="false" /></layoutData>
+                </Button>
+                 <OverflowToolbarButton text="Edit" icon="sap-icon://edit"/>
+                <OverflowToolbarButton text="Add" icon="sap-icon://add"/>
+                <OverflowToolbarButton text="Favorite" icon="sap-icon://favorite"/>
+                <OverflowToolbarButton text="Flag" icon="sap-icon://flag"/>
+              -->
+ 
+            </OverflowToolbar>
+    </footer>   
+						
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
