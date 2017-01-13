@@ -5,6 +5,22 @@ sap.ui.define([
 	"use strict";
  
 	return Controller.extend("sap.ui.webapp.controller.Master", {
+		
+		handleSearch : function (evt) {
+		
+		// create model filter
+		var filters = [];
+		var query = evt.getParameter("query");
+		if (query && query.length > 0) {
+			var filter = new sap.ui.model.Filter("firstname", sap.ui.model.FilterOperator.Contains, query);
+			filters.push(filter);
+		}
+		
+		// update list binding
+		var list = this.getView().byId("list");
+		var binding = list.getBinding("items");
+		binding.filter(filters);
+	},
  	handleListItemPress : function (evt) {
 
  		var router = sap.ui.core.UIComponent.getRouterFor(this);
