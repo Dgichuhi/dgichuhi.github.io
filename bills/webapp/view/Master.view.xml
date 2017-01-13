@@ -24,7 +24,7 @@
 		items="{/contacts}">
 		<items>
 			<ObjectListItem
-			icon="images/WEW.png"
+			icon="images/wew.png"
 			type="Active"
 				press="handleListItemPress"
 				title="{firstname} {surname}"
