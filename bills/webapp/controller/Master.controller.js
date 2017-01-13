@@ -17,7 +17,7 @@ sap.ui.define([
 		}
 		
 		// update list binding
-		var list = this.getView().byId("list");
+		var list = this.getView().byId("ShortProductList");
 		var binding = list.getBinding("items");
 		binding.filter(filters);
 	},
