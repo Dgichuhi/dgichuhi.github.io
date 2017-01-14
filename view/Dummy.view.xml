@@ -5,7 +5,7 @@ xmlns="sap.m"
 xmlns:mvc="sap.ui.core.mvc"
 xmlns:core="sap.ui.core" >
 <Page
-title= "Explore"
+title= "Explore" showNavButton="{device>/isPhone}"
 
 >
  <headerContent>
