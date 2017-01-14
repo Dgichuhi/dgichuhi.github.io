@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (Controller) {
 	"use strict";
  
-	return Controller.extend("sap.ui.demo.myFiori.view.Dummy", {
+	return Controller.extend("sap.ui.demo.myFiori.view.Detail", {
  	
 		getRouter : function () {
 			return sap.ui.core.UIComponent.getRouterFor(this);
