@@ -1,6 +1,6 @@
-sap.ui.localResources("openui5");
-     jQuery.sap.registerModulePath('openui5','openui5'); // this only works with disabled web security
-    jQuery.sap.require("openui5.ckeditor");
+sap.ui.localResources("editor");
+     jQuery.sap.registerModulePath('editor','editor'); // this only works with disabled web security
+    jQuery.sap.require("editor.ckeditor");
 sap.ui.jsview("sap.ui.webapp.view.Editor", {
 
 	getControllerName: function () {
