@@ -213,10 +213,10 @@
 
 				</IconTabFilter>
 				<IconTabSeparator icon="sap-icon://vertical-grip"/>
-				<IconTabFilter text = "Add Client"
+				<IconTabFilter text = "Make Notes"
 					icon="sap-icon://add-coursebook">
 							
-<!--	<mvc:JSView id="myJSView" viewName="sap.ui.webapp.view.Lawyersclient" /> -->
+<mvc:JSView id="myJSView" viewName="sap.ui.webapp.view.Editor" /> 
 
 
 
