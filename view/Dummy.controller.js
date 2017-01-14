@@ -6,7 +6,8 @@ sap.ui.define([
  
 	return Controller.extend("sap.ui.demo.myFiori.view.Dummy", {
  	handleNavBack : function (evt) {
-		this.nav.back("Master");
+		var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+			oRouter.navTo("Master");
 	}
 		});
  
