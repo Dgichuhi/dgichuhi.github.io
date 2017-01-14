@@ -10,9 +10,9 @@ sap.ui.jsview("sap.ui.webapp.view.Editor", {
 	createContent: function (oController) {
 		 var oEditor2 = new editor.CKEditor({
         value: '{/txt}',
-        width: "600px",
+        width: "100%",
         height: "290px",
-        //toolbar: 'Basic',
+        toolbar: 'Basic',
         inline: false,
         uiColor: '#0090ff'
     });
