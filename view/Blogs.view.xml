@@ -42,7 +42,7 @@
         <Link 
           text="More coming... Call/Message"
           press="onMessageDialogPress"
-          href="#"/>
+          href=""/>
 
         
       </l:content>
