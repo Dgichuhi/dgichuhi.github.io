@@ -51,7 +51,7 @@
 				</IconTabFilter>
 				<IconTabSeparator icon=""/>
 	<IconTabFilter icon="sap-icon://physical-activity" text="A Surprise!" iconColor="Positive">
-		<Image src="images/kang.gif" height="200px"/>
+		<Image src="images/kang.gif" height="400px"/>
 	</IconTabFilter>
 	<IconTabSeparator icon=""/>
 			</items>
