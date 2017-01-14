@@ -5,7 +5,7 @@ sap.ui.define([
 	"use strict";
  
 	return Controller.extend("sap.ui.demo.myFiori.view.Dummy", {
- 	handleNavButtonPress : function (evt) {
+ 	handleNavBack : function (evt) {
 		this.nav.back("Master");
 	}
 		});
