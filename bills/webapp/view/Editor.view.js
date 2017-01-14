@@ -12,6 +12,7 @@ sap.ui.jsview("sap.ui.webapp.view.Editor", {
         value: '{/txt}',
         width: "100%",
         height: "290px",
+	toolbarStartupExpanded: true,		
         toolbar: 'Basic',
         inline: false,
         uiColor: '#0090ff'
