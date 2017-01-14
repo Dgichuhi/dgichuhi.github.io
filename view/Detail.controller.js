@@ -26,7 +26,7 @@ _handleRouteMatched: function(evt) {
 		
 	},
 
-	h123andleNavButtonPress : function (evt) {
+	hndleNavButtonPress : function (evt) {
 		this.nav.back("Master");
 	},
 	
