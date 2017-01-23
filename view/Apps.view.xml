@@ -52,6 +52,12 @@
 		text="Fiori like bills management system"
 		href="bills/webapp"
 		target="_blank" />
+								
+	<Link 
+		text="Student IS - Ongoing Work"
+		href="sms/webapp"
+		target="_blank" />
+								
 
 								
 							</Panel>
