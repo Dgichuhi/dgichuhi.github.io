@@ -49,6 +49,7 @@
 		
 		var myView = sap.ui.view({id:"myView",viewContent:html, type:sap.ui.core.mvc.ViewType.HTML});
 				//myView.placeAt("logo");
+		
 	
 		sap.ui.getCore().attachInit(function () {
 			new sap.m.Shell({
@@ -62,5 +63,10 @@
 <body class="sapUiBody">
 
 <div id="content"></div>
+	<div id="splash-screen">
+    <div class="splash-screen-text">Loading...</div>
+    <div class="splash-screen-circle-outer"></div>
+    <div class="splash-screen-circle-inner"></div>
+  </div>
 </body>
 </html>
