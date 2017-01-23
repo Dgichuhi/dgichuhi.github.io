@@ -44,7 +44,7 @@
 				icon="sap-icon://create"
 				number=""
 				numberUnit="case"
-				title="Live Case"
+				title="STATISTICS"
 				info=""
 				infoState="Success"
 				
@@ -56,7 +56,7 @@
 				icon="sap-icon://create"
 				number="{mod1>/total}"
 				numberUnit="CLIENTS"
-				title="ADD CLIENTS"
+				title="ADD STUDENT"
 				info="{mod2>/total} clients added"
 				infoState="Success"
 				
@@ -95,7 +95,7 @@
 				<StandardTile
 				icon="sap-icon://collections-insight"
 				number="9"
-				numberUnit="clients"
+				numberUnit="students"
 				title="ZERO PAYMENT"
 				info=""
 				infoState="Error"
@@ -106,8 +106,8 @@
 				icon="sap-icon://collaborate"
 				number="22"
 				numberUnit=""
-				title="LAWYERS"
-				info="1 day ago"
+				title="MALE STUDENTS"
+				info=""
 				infoState="Success"
 				press="handleBalances"
 
@@ -116,17 +116,17 @@
 				icon="sap-icon://manager"
 				number="44"
 				numberUnit=""
-				title="PARTNERS"
-				info="banks and law firms"
+				title="FEMALE STUDENTS"
+				info="new admitted"
 				infoState=""
 				press="handleBalances"
 
 				/>
 				<StandardTile
 				icon="sap-icon://per-diem"
-				number="11"
+				number=""
 				numberUnit=""
-				title="DIARY"
+				title="EXAMS"
 				info="4 hours ago"
 				infoState="Success"
 				press="handleBalances"
@@ -136,7 +136,7 @@
 				icon="sap-icon://wrench"
 				number=""
 				numberUnit="Important"
-				title="EXTRAS"
+				title="PERFORMANCE"
 				info=""
 				infoState=""
 				press="handleBalances"
@@ -147,8 +147,8 @@
 				icon="sap-icon://manager"
 				number="44"
 				numberUnit=""
-				title="PARTNERS"
-				info="banks and law firms"
+				title="TEACHERS"
+				info=""
 				infoState=""
 				press="handleBalances"
 
@@ -157,9 +157,9 @@
 				icon="sap-icon://per-diem"
 				number="11"
 				numberUnit=""
-				title="DIARY"
-				info="4 hours ago"
-				infoState="Success"
+				title="EXPELLED STUDENTS"
+				info="1 student(s) expelled today"
+				infoState="Critical"
 				press="handleBalances"
 
 				/>
