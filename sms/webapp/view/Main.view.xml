@@ -1,0 +1,218 @@
+<mvc:View
+  height="100%"
+  controllerName="controller.Main"
+   xmlns:core="sap.ui.core"
+  xmlns:tnt="sap.tnt"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:html="http://www.w3.org/1999/xhtml"
+  xmlns="sap.m">
+  <Page
+    showHeader="false"
+    enableScrolling="false" >
+	<tnt:ToolHeader>
+	 <Image src="images/giphy.gif" width="6%"/>
+        <Button icon="sap-icon://menu2" type="Transparent">
+            <layoutData>
+                <OverflowToolbarLayoutData priority="NeverOverflow" />
+            </layoutData>
+        </Button>
+        <ToolbarSpacer />
+        <core:Icon src="sap-icon://travel-itinerary">
+        </core:Icon>
+        <Text text="MyPractis" wrapping="false">
+            <layoutData>
+                <OverflowToolbarLayoutData priority="Disappear" />
+            </layoutData>
+        </Text>
+        <ToolbarSpacer />
+        <Button text="Dominic Gichuhi" type="Transparent" press="handleUserNamePress">
+            <layoutData>
+                <OverflowToolbarLayoutData priority="NeverOverflow" />
+            </layoutData>
+        </Button>
+    </tnt:ToolHeader>
+	
+
+	
+		<ScrollContainer items = "{/all}"
+		title = "Client Management"
+			id="container1"
+			horizontal="true"
+			vertical= "true"
+			focusable = "true"
+			width="100%"
+			height="100%"
+			class = "addcli"
+			tileDelete="handleTileDelete">
+		 <HBox>
+      
+	   <html:h2 class="header">Client Management</html:h2>
+      </HBox>
+	  	
+      <StandardTile class="sapMTile"
+				icon="sap-icon://create"
+				number=""
+				numberUnit="case"
+				title="Live Case"
+				info=""
+				infoState="Success"
+				
+				backgroundImage="images/law.png"
+				press="handleCase"
+
+				/>
+			<StandardTile 
+				icon="sap-icon://create"
+				number="{mod1>/total}"
+				numberUnit="CLIENTS"
+				title="ADD CLIENTS"
+				info="{mod2>/total} clients added"
+				infoState="Success"
+				
+				backgroundImage="images/law.png"
+				press="handleClients"
+
+				/>
+				<StandardTile
+				icon="sap-icon://loan"
+				number="{mod4>/expect}"
+				numberUnit="kes"
+				title="TOTAL CASH EXPECTED"
+				info="{mod1>/total} clients"
+				infoState="Success"
+				press=""
+				/>
+				<StandardTile
+				icon="sap-icon://loan"
+				number="{mod3>/paid}"
+				numberUnit="kes"
+				title="TOTAL PAYMENTS"
+				info="3 days ago"
+				infoState="Warning"
+				press="handleBalances"
+				/>
+				<StandardTile
+				icon="sap-icon://monitor-payments"
+				number="{mod5>/balance}"
+				numberUnit="kes"
+				title="BALANCES"
+				info=""
+				infoState="Warning"
+				press="handleBalances"
+
+				/>
+				<StandardTile
+				icon="sap-icon://collections-insight"
+				number="9"
+				numberUnit="clients"
+				title="ZERO PAYMENT"
+				info=""
+				infoState="Error"
+				press="handleBalances"
+
+				/>
+				<StandardTile
+				icon="sap-icon://collaborate"
+				number="22"
+				numberUnit=""
+				title="LAWYERS"
+				info="1 day ago"
+				infoState="Success"
+				press="handleBalances"
+
+				/>
+				<StandardTile
+				icon="sap-icon://manager"
+				number="44"
+				numberUnit=""
+				title="PARTNERS"
+				info="banks and law firms"
+				infoState=""
+				press="handleBalances"
+
+				/>
+				<StandardTile
+				icon="sap-icon://per-diem"
+				number="11"
+				numberUnit=""
+				title="DIARY"
+				info="4 hours ago"
+				infoState="Success"
+				press="handleBalances"
+
+				/>
+				<StandardTile
+				icon="sap-icon://wrench"
+				number=""
+				numberUnit="Important"
+				title="EXTRAS"
+				info=""
+				infoState=""
+				press="handleBalances"
+
+				/>
+				 <HBox>
+      
+	   <html:h2 class="header">Case Management</html:h2>
+      </HBox>
+	  <StandardTile
+				icon="sap-icon://manager"
+				number="44"
+				numberUnit=""
+				title="PARTNERS"
+				info="banks and law firms"
+				infoState=""
+				press="handleBalances"
+
+				/>
+				<StandardTile
+				icon="sap-icon://per-diem"
+				number="11"
+				numberUnit=""
+				title="DIARY"
+				info="4 hours ago"
+				infoState="Success"
+				press="handleBalances"
+
+				/>
+				<StandardTile
+				icon="sap-icon://wrench"
+				number=""
+				numberUnit="Important"
+				title="EXTRAS"
+				info=""
+				infoState=""
+				press="handleBalances"
+
+				/>
+	  <HBox>
+      <Text text =""/>
+	   <Text text =""/>
+	    <Text text =""/>
+		<Text text =""/>
+	   <Text text =""/>
+	    <Text text =""/>
+		 <Text text =""/>
+	   <Text text =""/>
+	    <Text text =""/>
+		<Text text =""/>
+	   <Text text =""/>
+	    <Text text =""/>
+	 
+      </HBox>
+	  
+				
+		</ScrollContainer>
+	
+	
+    
+    <footer>
+      <Toolbar>
+        <ToolbarSpacer/>
+          <Button text="Edit" press="handleEditPress" />
+          <Button text="Busy state" press="handleBusyPress" />
+        <ToolbarSpacer/>
+      </Toolbar>
+    </footer>
+  </Page>
+</mvc:View>
