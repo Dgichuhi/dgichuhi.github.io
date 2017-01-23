@@ -181,13 +181,45 @@ height:40%;
 		
 		var myView = sap.ui.view({id:"myView",viewContent:html, type:sap.ui.core.mvc.ViewType.HTML});
 				//myView.placeAt("logo");
-		
+		function appInit() {
+      if (window.cordova) {
+        // cordova specific launch code
+      } else {
+      	setTimeout(function(){
 			new sap.m.Shell({
 			app : new sap.ui.core.ComponentContainer({
 				name : "sap.ui.demo.myFiori"
 				})
 				}).placeAt("content");
+				},4500);
+				}
+			}
+			 function appReady() {
+      // remove splash screen from DOM
+      // placeAt('content','only') only removes, 
+      // but does not destroy elements!
+      setTimeout(function(){
+
+      $("#splash-screen").remove();
+  },5500);
+     // $("#splash-screen").fadeOut(5900);
+      $("#content").fadeIn(6100);
+      // launch application
+      appInit();
+    }
+
+     // need to be executed in the onload event to 
+     // ensure all libraries are properly loaded
+    window.onload = function () {
+      if (window.cordova) {
+        document.addEventListener("deviceready", appReady, false);
+      } else {
+        // uncomment next line to enable app start
+        appReady();
+      }
+    }
 				
+					
 				
 					
 				
