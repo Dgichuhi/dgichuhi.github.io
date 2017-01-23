@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<link rel="icon" href="images/giphy.gif">
+<title>MyPractis</title>
+<style>
+
+
+
+
+.header {
+       display: block;
+              padding: 15px;
+              margin: 15px auto;
+			
+			  font-size:20px;
+              background: radial-gradient(white 5%, yellow 15%, green 60%);
+             
+              border-radius: 10px;
+              text-align: center;
+			  color:#ff00ff;
+              
+ 
+       }
+.addcli {
+	position: absolute;
+	top: 0;
+	padding-left: 6.5%;
+	padding-right: 2.5%;
+	border: 1px solid #dddddd;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+	background-color:#20B2AA;
+	display: inline-block;
+	transition-property: transform3d;
+	transition-duration: 0.2s;
+	
+	border-radius: 10px;
+	
+	height: 12rem;
+}
+
+ 
+</style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+
+  <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+  id="sap-ui-bootstrap" data-sap-ui-libs="sap.m,sap.ui.commons, sap.ui.table, sap.ui.richtexteditor"
+  data-sap-ui-resourceroots='{"view": "./"}'
+  data-sap-ui-theme="sap_bluecrystal" data-sap-ui-xx-bindingSyntax="complex">
+  </script>
+  <!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+<!--https://sapui5.hana.ondemand.com/resources/sap-ui-core.js-->
+  <!-- by Denise Nepraunig @denisenepraunig -->
+  
+  <!-- example for a SAPUI5 MVC XML view with JSON data from a file
+       and data binding based on the demokit example from sapui5:
+       https://sapui5.netweaver.ondemand.com/sdk/explored.html#/entity/sap.m.Table/samples
+       -->
+
+  <script>
+ 
+   
+  
+  
+
+    
+	
+	sap.ui.localResources("Component.js");
+    sap.ui.localResources("view");
+	sap.ui.localResources("controller");
+    var app = new sap.m.App({ id:"App",
+      initialPage: "idMain"
+    });
+    var page = sap.ui.view({
+      id: "idMain",
+      viewName: "view.Main",
+      type: sap.ui.core.mvc.ViewType.XML
+    });
+    app.addPage(page);
+    app.placeAt("content");
+
+  </script>
+
+</head>
+
+<body class="sapUiBody" role="application">
+  <div id="content"></div>
+</body>
+
+</html>
