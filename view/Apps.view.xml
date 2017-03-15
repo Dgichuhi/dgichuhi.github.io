@@ -49,7 +49,7 @@
 							<Panel expandable="true" expanded="true"  headerText="Sample system. Have a look:" width="auto" class="sapUiResponsiveMargin" >
 
 	<Link 
-		text="Fiori like bills management system"
+		text="Bills Management System"
 		href="bills/webapp"
 		target="_blank" />
 								
