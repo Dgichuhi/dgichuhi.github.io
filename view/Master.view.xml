@@ -15,7 +15,7 @@ width="100%" >
 </Bar>
 </subHeader>-->
 		<List>
-			<ObjectListItem title = "Welcome"
+			<ObjectListItem title = "Home"
 					type="Active"
 					icon="sap-icon://addresses"
 				press="handleListItemPress"
