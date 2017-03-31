@@ -26,10 +26,10 @@
 				&lt;p style="color:green; font-weight:600; text-align:justify;line-height:2em;"&gt;
 				At Dosep, we take pride in delivering timeless systems and business tools that ensure real time data is generated and used to make decisions within the shortest time possible. With our extensive knowledge and expertise in data analysis, we produce business tools that allow you to save and dedicate time to other important tasks while at the same time being able to monitor your business performance effortlessly and regardless of your location. 
 				&lt;/p&gt;'/>
-				<Image src="images/giphy.gif"/>
+				<!--<Image src="images/giphy.gif"/>-->
 <FormattedText
 			htmlText='
-				&lt;p style="font-weight:600;" &gt;Meanwhile as we wait for our horse to bring coffee, you can contact us through:&lt;/p&gt;&lt;p style="text-align:center;"&gt; &lt;span &gt; &lt;strong&gt;+254 702 495 991&lt;/strong&gt; &lt;br&gt; &lt;strong&gt;gichuhimd@gmail.com&lt;/strong&gt;.&lt;/span&gt;&lt;/p&gt;
+				&lt;p style="font-weight:600;" &gt; You can contact us through:&lt;/p&gt;&lt;p style="text-align:center;"&gt; &lt;span &gt; &lt;strong&gt;+254 702 495 991&lt;/strong&gt; &lt;br&gt; &lt;strong&gt;gichuhimd@gmail.com&lt;/strong&gt;.&lt;/span&gt;&lt;/p&gt;
 				'/>
 	</VBox>
 								
