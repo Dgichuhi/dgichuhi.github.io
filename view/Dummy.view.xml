@@ -23,7 +23,8 @@ title= "Explore" showNavButton="{device>/isPhone}" navButtonPress="handleNavBack
   <footer>
             <OverflowToolbar id="otbFooter">
                 <ToolbarSpacer/>
-               
+               <Button
+               icon="sap-icon://accept" text="Hire Us" press="onMessageDialogPress" type="Accept" />
  
             </OverflowToolbar>
     </footer>   
