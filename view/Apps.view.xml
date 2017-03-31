@@ -33,10 +33,10 @@
 				&lt;p style="color:green; font-weight:600; text-align:justify;line-height:2em;"&gt;
 				We show you samples of the kind of applications we make. Every minute at Dosep is spent caring for the customer through provision of systems that are focused on enhancing user experience while fulfilling the needs of the user and their business objectives. Considering that their are online based, access to information is not limited to location. Whether you are on a business trip or sun-bathing at the coast, you will have no worries about the activities sorrounding your organization. 
 				&lt;/p&gt;'/>
-				<Image src="images/giphy.gif"/>
+				<!--<Image src="images/giphy.gif"/>-->
 <FormattedText
 			htmlText='
-				&lt;p style="font-weight:600;" &gt;Meanwhile as we wait for our horse to bring coffee, you can contact us through:&lt;/p&gt;&lt;p style="text-align:center;"&gt; &lt;span &gt; &lt;strong&gt;+254 702 495 991&lt;/strong&gt; &lt;br&gt; &lt;strong&gt;gichuhimd@gmail.com&lt;/strong&gt;.&lt;/span&gt;&lt;/p&gt;
+				&lt;p style="font-weight:600;" &gt; You can contact us through:&lt;/p&gt;&lt;p style="text-align:center;"&gt; &lt;span &gt; &lt;strong&gt;+254 702 495 991&lt;/strong&gt; &lt;br&gt; &lt;strong&gt;gichuhimd@gmail.com&lt;/strong&gt;.&lt;/span&gt;&lt;/p&gt;
 				'/>
 	</VBox>
 								
@@ -49,12 +49,12 @@
 							<Panel expandable="true" expanded="true"  headerText="Sample system. Have a look:" width="auto" class="sapUiResponsiveMargin" >
 
 	<Link 
-		text="Bills Management System"
+		text="Bills Management System "
 		href="bills/webapp"
-		target="_blank" />
+		target="_blank" /> 
 								
 	<Link 
-		text="Student IS - Ongoing Work"
+		text=" Student IS - Ongoing Work"
 		href="sms/webapp"
 		target="_blank" />
 								
