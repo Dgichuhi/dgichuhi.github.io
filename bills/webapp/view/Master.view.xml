@@ -29,7 +29,7 @@
 				press="handleListItemPress"
 				title="{firstname} {surname}"
 				number="{totalcashexpected}"
-				numberUnit="USD"
+				numberUnit="KES"
 				numberState="{= ${totalcashexpected} > 350001 ? 'Error' : 'Success' }"
 				description = "{note}"
 				
