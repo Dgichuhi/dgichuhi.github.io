@@ -47,7 +47,7 @@
 					<!--<mvc:JSView id="myJSView2" viewName="sap.ui.webapp.view.Editor" />-->
 
 					<VBox class="sapUiSmallMargin">
-						<Text text="Update bills for {firstname} {secondname} {surname}"/>
+						<Text text="Update fees for {firstname} {secondname} {surname}"/>
 		<f:SimpleForm id="SimpleFormToolbar"
 			editable="true"
 			layout="ResponsiveGridLayout" >
