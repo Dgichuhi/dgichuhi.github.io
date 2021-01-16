@@ -46,9 +46,7 @@ targetAggregation: "detailPages"
 			viewData : { component : this }
 		});
 		
-		var oModel = new sap.ui.model.json.JSONModel("model/data1.json");
-		oView.setModel(oModel);
-				var oModel4 = new sap.ui.model.json.JSONModel("model/salesvolume.json");
+						var oModel4 = new sap.ui.model.json.JSONModel("model/salesvolume.json");
 oModel4.setSizeLimit(100000);
 oView.setModel(oModel4, "salesvolume");
 var oModel4 = new sap.ui.model.json.JSONModel("model/salesvolumeTotal.json");
