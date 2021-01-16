@@ -90,7 +90,17 @@ items="{salesvolumedrill>/salesvolume}">
 <Text text="Item Group" />
 </Column>
 <Column><Text text="Jan" /></Column>
-
+<Column><Text text="Feb" /></Column>
+<Column><Text text="March" /></Column>
+<Column><Text text="April" /></Column>
+<Column><Text text="May" /></Column>
+<Column><Text text="June" /></Column>
+<Column><Text text="July" /></Column>
+<Column><Text text="August" /></Column>
+<Column><Text text="Sep" /></Column>
+<Column><Text text="Oct" /></Column>
+<Column><Text text="Nov" /></Column>
+<Column><Text text="Dec" /></Column>
 <Column><Text text="Total Cartons" /></Column>
 </columns>
 <items>
@@ -101,7 +111,28 @@ items="{salesvolumedrill>/salesvolume}">
 
 
     <Text text="{salesvolumedrill>Jan}" visible ="{=${salesvolumedrill>Jan}!=='0.00'}"/>
-   
+   <Text
+    text="{salesvolumedrill>Feb}"  visible ="{=${salesvolumedrill>Feb}!=='0.00'}" />
+    <Text
+    text="{salesvolumedrill>Mar}" visible ="{=${salesvolumedrill>Mar}!=='0.00'}" />
+    <Text
+    text="{salesvolumedrill>Apr}" visible ="{=${salesvolumedrill>Apr}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>May}" visible ="{=${salesvolumedrill>May}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>June}" visible ="{=${salesvolumedrill>June}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Jul}" visible ="{=${salesvolumedrill>Jul}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Aug}" visible ="{=${salesvolumedrill>Aug}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Sep}" visible ="{=${salesvolumedrill>Sep}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Oct}" visible ="{=${salesvolumedrill>Oct}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Nov}" visible ="{=${salesvolumedrill>Nov}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Dec}" visible ="{=${salesvolumedrill>Dec}!=='0.00'}"/>
     <ObjectIdentifier title="{salesvolumedrill>TotalCartons}" visible ="{=${salesvolumedrill>TotalCartons}!=='0.00'}"/>
 
 
