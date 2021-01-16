@@ -62,7 +62,14 @@ sap.ui.define([
 			    	              
 			    	               
 			    	   ]
-			       } 
+			       } ,
+				
+{
+pattern: "sales",
+name: "sales",
+view: "SalesAnalysis",
+targetAggregation: "detailPages"
+}
 	        ]
 	        
 			
