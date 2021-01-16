@@ -49,7 +49,7 @@ targetAggregation: "detailPages"
 		var oView = sap.ui.view({
 			id : "app",
 			viewName : "sap.ui.webapp.view.App",
-			type : "JS",
+			type : "XML",
 			viewData : { component : this }
 		});
 		
