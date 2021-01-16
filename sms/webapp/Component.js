@@ -1,33 +1,26 @@
 sap.ui.define([
-	"sap/ui/core/UIComponent",
-	"sap/ui/model/json/JSONModel"
-   
+	"sap/ui/core/UIComponent"
 ], function (UIComponent) {
 	"use strict";
- 
-	return UIComponent.extend("sap.ui.webapp.Component", {
- 
-		
-			metadata: {
-		
-		routing: {
-			
-			config: {
-				viewType: "XML",
-				viewPath: "sap.ui.webapp.view",
-				targetControl: "app",
-				clearTarget: false,
-				transition: "flip",
-				bypassed: {
-               pattern: "notFound",
-               name:"notfound",
-               view:"NotFound",
-               targetAggregation:"detailPages",
-               transition:"flip"
 
-            }
-			},
-			routes: [
+	return UIComponent.extend("sap.ui.webapp.Component", {
+
+
+		metadata: {
+
+		"rootView": "knc.ppe.com.view.App",		// initial view
+
+		"routing": {
+			 "config": {
+			    "routerClass": "sap.m.routing.Router",	// router class
+			    "viewType": "XML",						// types of views using in app
+			    "viewPath": "sap.ui.webapp.view",			// folder of views
+			    //"controlId": "app",						// container where pages are placed while navigating
+			    "targetAggregation": "pages",			// contents which needs to be replced while navigating
+					"transition": "float"					// navigation transition effect
+			 },
+
+			"routes": [
 			
 {
 pattern: "sales",
