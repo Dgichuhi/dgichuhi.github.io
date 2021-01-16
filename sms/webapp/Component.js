@@ -23,10 +23,10 @@ sap.ui.define([
 			"routes": [
 			
 {
-pattern: "sales",
+pattern: "",
 name: "sales",
 view: "SalesAnalysis",
-targetAggregation: "detailPages"
+targetControl: "app"
 }
 	        ]
 	        
