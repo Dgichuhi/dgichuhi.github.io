@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="sap.ui.webapp.SalesAnalysis"
+	controllerName="sap.ui.webapp.controller.SalesAnalysis"
 	xmlns="sap.m"
 		xmlns:tnt="sap.tnt"
 	xmlns:core="sap.ui.core"
