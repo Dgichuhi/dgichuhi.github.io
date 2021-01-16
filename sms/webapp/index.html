@@ -1,92 +1,83 @@
+<?php
+   include('session.php');
+	//header("Content-Type: application/json");
+header("Expires: 0");
+	header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+  // ini_set('zlib.output_compression_level', 8);
+   //ob_start("ob_gzhandler");
+?>
 <!DOCTYPE HTML>
 <html>
 
-<head>
-<link rel="icon" href="images/giphy.gif">
-<title>Student Management System</title>
-<style>
+	<head>
+    <style>
+    .img4 {
+     height:25px;
+      width:25px;
+      z-index=2;
+      position:absolute;
+      bottom:20px;
+      right:20px;
+  }
+  .watermarked{
+    float:left;
+        width: 100px;
 
-
-
-
-.header {
-       display: block;
-              padding: 15px;
-              margin: 15px auto;
-			
-			  font-size:20px;
-              background: radial-gradient(white 5%, yellow 15%, green 60%);
-             
-              border-radius: 10px;
-              text-align: center;
-			  color:#ff00ff;
-              
- 
-       }
-.addcli {
-	position: absolute;
-	top: 0;
-	padding-left: 6.5%;
-	padding-right: 2.5%;
-	border: 1px solid #dddddd;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-	background-color:#20B2AA;
-	display: inline-block;
-	transition-property: transform3d;
-	transition-duration: 0.2s;
-	
-	border-radius: 10px;
-	
-	height: 12rem;
+        position: absolute;
+        z-index: 1;
+  }
+  .sapMTile{
+    height : 200px !important,
+width : 112px !important
+  }
+  .sapUiIcon {
+    font-size: 1.5rem !important;
 }
 
- 
-</style>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv='Content-Type' content='text/html;charset=UTF-8' />
+    </style>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
 
-  <script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
-  id="sap-ui-bootstrap" data-sap-ui-libs="sap.m,sap.ui.commons, sap.ui.table, sap.ui.richtexteditor"
-  data-sap-ui-resourceroots='{"view": "./"}'
-  data-sap-ui-theme="sap_bluecrystal" data-sap-ui-xx-bindingSyntax="complex">
-  </script>
-  <!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
-<!--https://sapui5.hana.ondemand.com/resources/sap-ui-core.js-->
-  <!-- by Denise Nepraunig @denisenepraunig -->
-  
-  <!-- example for a SAPUI5 MVC XML view with JSON data from a file
-       and data binding based on the demokit example from sapui5:
-       https://sapui5.netweaver.ondemand.com/sdk/explored.html#/entity/sap.m.Table/samples
-       -->
+		<title>MELVINS PORTAL</title>
 
-  <script>
- 
-   
-  
-  
+		<script id="sap-ui-bootstrap"
+			src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js?t=<?= time();?>"
+			data-sap-ui-libs="sap.m, sap.ui.table, sap.ui.layout,sap.ui.core"
+			data-sap-ui-theme="sap_belize_plus"
+			data-sap-ui-compatVersion="edge"
+			data-sap-ui-preload="async"
+			data-sap-ui-language="en"
+			data-sap-ui-resourceroots='{"sap.ui.webapp": "./"}'>
 
-    
-	
-	sap.ui.localResources("Component.js");
-    sap.ui.localResources("view");
-	sap.ui.localResources("controller");
-    var app = new sap.m.App({ id:"App",
-      initialPage: "idMain"
-    });
-    var page = sap.ui.webapp.view({
-      id: "idMain",
-      viewName: "sap.ui.view.view.SalesAnalysis",
-      type: sap.ui.core.mvc.ViewType.XML
-    });
-    app.addPage(page);
-    app.placeAt("content");
+		</script>
 
-  </script>
+		<!--
+https://sapui5.hana.ondemand.com/resources/sap-ui-core.js
+<link rel="stylesheet" type="text/css" href="css/style.css">-->
 
-</head>
+		<script>
 
-<body class="sapUiBody" role="application">
-  <div id="content"></div>
-</body>
+sap.ui.getCore().attachInit(function () {
+			sap.ui.require([
+				"sap/m/Shell",
+				"sap/ui/core/ComponentContainer"
+			], function (Shell, ComponentContainer) {
+
+			new Shell({								// placing everything in shell
+				//appWidthLimited:false,
+				app: new ComponentContainer({		// component container which holds component file
+					name: "sap.ui.webapp",				// root location of app
+					height: "100%"
+									})
+			}).placeAt("content");
+		});
+	});
+		</script>
+	</head>
+
+	<body class="sapUiBody" id="content">
+	</body>
 
 </html>
