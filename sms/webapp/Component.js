@@ -52,7 +52,7 @@ oView.setModel(oModel4t, "salesvolume");
 var oModel4 = new sap.ui.model.json.JSONModel("model/salesvolumeTotal.json");
 oModel4.setSizeLimit(100000);
 oView.setModel(oModel4, "salesvolumeTotal");
-var oModel433 = new sap.ui.model.json.JSONModel("model/salesvolumedrill.json");
+var oModel433 = new sap.ui.model.json.JSONModel("model/salaesvolumedrill.json");
 oModel433.setSizeLimit(100000);
 oView.setModel(oModel433, "salesvolumedrill");
 var oModel4e = new sap.ui.model.json.JSONModel("model/salesvolumecomparison.json");
