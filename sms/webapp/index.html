@@ -73,9 +73,9 @@
     var app = new sap.m.App({ id:"App",
       initialPage: "idMain"
     });
-    var page = sap.ui.view({
+    var page = sap.ui.webapp.view({
       id: "idMain",
-      viewName: "view.SalesAnalysis",
+      viewName: "sap.ui.view.view.SalesAnalysis",
       type: sap.ui.core.mvc.ViewType.XML
     });
     app.addPage(page);
