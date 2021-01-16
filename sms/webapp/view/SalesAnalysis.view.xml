@@ -1,0 +1,1040 @@
+<mvc:View
+	controllerName="knc.ppe.com.controller.SalesAnalysis"
+	xmlns="sap.m"
+		xmlns:tnt="sap.tnt"
+	xmlns:core="sap.ui.core"
+	 xmlns:smartForm="sap.ui.comp.smartform" xmlns:smartField="sap.ui.comp.smartfield"
+	xmlns:mvc="sap.ui.core.mvc"
+  xmlns:viz="sap.viz.ui5.controls"
+      xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+      xmlns:viz.data="sap.viz.ui5.data"
+	>
+	<Page
+						title="Creditors Reports"
+						navButtonPress="onNavBack"
+						showNavButton="false"
+						showHeader = "false">
+						<IconTabBar
+							select="onSelectChanged"
+				    id="idIconTabBarMulti"
+				    expanded="{device>/isNoPhone}"
+				    class="sapUiResponsiveContentPadding">
+				    <items>
+
+
+<IconTabFilter icon="sap-icon://along-stacked-chart" iconColor = "Neutral" text = "Sales Volume"  key="1">
+
+<viz:Popover id="idPopOver1"></viz:Popover>
+<viz:VizFrame xmlns:viz="sap.viz.ui5.controls" id="idVizFrame1" uiConfig="{applicationSet:'fiori'}" vizType="stacked_bar" height= "900px" width="100%">
+<viz:dataset>
+<dataSet:FlattenedDataset xmlns:dataSet="sap.viz.ui5.data" data="{salesvolume>/salesvolume}">
+<dataSet:dimensions>
+
+	<dataSet:DimensionDefinition name="ItmsGrpNam" value="{salesvolume>ItmsGrpNam}">
+	</dataSet:DimensionDefinition>
+</dataSet:dimensions>
+<dataSet:measures>
+	<dataSet:MeasureDefinition name="Jan" value="{salesvolume>Jan}">
+	</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Feb" value="{salesvolume>Feb}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Mar" value="{salesvolume>Mar}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Apr" value="{salesvolume>Apr}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="May" value="{salesvolume>May}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="June" value="{salesvolume>June}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Jul" value="{salesvolume>Jul}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Aug" value="{salesvolume>Aug}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Sep" value="{salesvolume>Sep}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Oct" value="{salesvolume>Oct}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Nov" value="{salesvolume>Nov}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Dec" value="{salesvolume>Dec}">
+		</dataSet:MeasureDefinition>
+</dataSet:measures>
+</dataSet:FlattenedDataset>
+</viz:dataset>
+<viz:feeds>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Jan"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Feb"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Mar"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Apr"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="May"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="June"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Jul"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Aug"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Sep"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Oct"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Nov"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Dec"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="categoryAxis" type="Dimension" values="ItmsGrpNam"/>
+
+</viz:feeds>
+</viz:VizFrame>
+
+<Table id="salesdrill"
+sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+class = "sapUiSizeCompact"
+noDataText = "Loading..."
+items="{salesvolumedrill>/salesvolume}">
+<columns>
+<Column
+>
+<Text text="Item Group" />
+</Column>
+<Column><Text text="Jan" /></Column>
+<Column><Text text="Feb" /></Column>
+<Column><Text text="March" /></Column>
+<Column><Text text="April" /></Column>
+<Column><Text text="May" /></Column>
+<Column><Text text="June" /></Column>
+<Column><Text text="July" /></Column>
+<Column><Text text="August" /></Column>
+<Column><Text text="Sep" /></Column>
+<Column><Text text="Oct" /></Column>
+<Column><Text text="Nov" /></Column>
+<Column><Text text="Dec" /></Column>
+<Column><Text text="Total Cartons" /></Column>
+</columns>
+<items>
+<ColumnListItem type = "Navigation" press="salesdrill">
+<cells>
+
+<ObjectIdentifier title="{salesvolumedrill>ItmsGrpNam}"/>
+
+
+    <Text text="{salesvolumedrill>Jan}" visible ="{=${salesvolumedrill>Jan}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Feb}"  visible ="{=${salesvolumedrill>Feb}!=='0.00'}" />
+    <Text
+    text="{salesvolumedrill>Mar}" visible ="{=${salesvolumedrill>Mar}!=='0.00'}" />
+    <Text
+    text="{salesvolumedrill>Apr}" visible ="{=${salesvolumedrill>Apr}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>May}" visible ="{=${salesvolumedrill>May}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>June}" visible ="{=${salesvolumedrill>June}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Jul}" visible ="{=${salesvolumedrill>Jul}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Aug}" visible ="{=${salesvolumedrill>Aug}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Sep}" visible ="{=${salesvolumedrill>Sep}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Oct}" visible ="{=${salesvolumedrill>Oct}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Nov}" visible ="{=${salesvolumedrill>Nov}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Dec}" visible ="{=${salesvolumedrill>Dec}!=='0.00'}"/>
+    <ObjectIdentifier title="{salesvolumedrill>TotalCartons}" visible ="{=${salesvolumedrill>TotalCartons}!=='0.00'}"/>
+
+
+</cells>
+</ColumnListItem>
+</items>
+</Table >
+
+<Table id="salesvolumeTotal"
+sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+class = "sapUiSizeCompact"
+noDataText = "Loading..."
+items="{salesvolumeTotal>/salesvolumeTotal}">
+<columns>
+<Column
+>
+<Text text="Total" />
+</Column>
+<Column><Text text="Jan" /></Column>
+<Column><Text text="Feb" /></Column>
+<Column><Text text="March" /></Column>
+<Column><Text text="April" /></Column>
+<Column><Text text="May" /></Column>
+<Column><Text text="June" /></Column>
+<Column><Text text="July" /></Column>
+<Column><Text text="August" /></Column>
+<Column><Text text="Sep" /></Column>
+<Column><Text text="Oct" /></Column>
+<Column><Text text="Nov" /></Column>
+<Column><Text text="Dec" /></Column>
+<Column><Text text="Total Cartons" /></Column>
+</columns>
+<items>
+<ColumnListItem>
+<cells>
+
+<ObjectIdentifier title="{salesvolumeTotal>Total}"/>
+
+
+    <ObjectIdentifier title="{salesvolumeTotal>Jan}" visible ="{=${salesvolumeTotal>Jan}!=='0.00'}"/>
+    <ObjectIdentifier title ="{salesvolumeTotal>Feb}"  visible ="{=${salesvolumeTotal>Feb}!=='0.00'}" />
+    <ObjectIdentifier title ="{salesvolumeTotal>Mar}" visible ="{=${salesvolumeTotal>Mar}!=='0.00'}" />
+    <ObjectIdentifier title ="{salesvolumeTotal>Apr}" visible ="{=${salesvolumeTotal>Apr}!=='0.00'}"/>
+    <ObjectIdentifier title ="{salesvolumeTotal>May}" visible ="{=${salesvolumeTotal>May}!=='0.00'}"/>
+    <ObjectIdentifier title ="{salesvolumeTotal>June}" visible ="{=${salesvolumeTotal>June}!=='0.00'}"/>
+    <ObjectIdentifier title ="{salesvolumeTotal>Jul}" visible ="{=${salesvolumeTotal>Jul}!=='0.00'}"/>
+    <ObjectIdentifier title ="{salesvolumeTotal>Aug}" visible ="{=${salesvolumeTotal>Aug}!=='0.00'}"/>
+    <ObjectIdentifier title ="{salesvolumeTotal>Sep}" visible ="{=${salesvolumeTotal>Sep}!=='0.00'}"/>
+    <ObjectIdentifier title ="{salesvolumeTotal>Oct}" visible ="{=${salesvolumeTotal>Oct}!=='0.00'}"/>
+    <ObjectIdentifier title ="{salesvolumeTotal>Nov}" visible ="{=${salesvolumeTotal>Nov}!=='0.00'}"/>
+    <ObjectIdentifier title ="{salesvolumeTotal>Dec}" visible ="{=${salesvolumeTotal>Dec}!=='0.00'}"/>
+    <ObjectIdentifier title="{salesvolumeTotal>TotalCartons}" visible ="{=${salesvolumeTotal>TotalCartons}!=='0.00'}"/>
+
+
+</cells>
+</ColumnListItem>
+</items>
+</Table >
+
+
+
+</IconTabFilter>
+<IconTabFilter icon="sap-icon://grid" iconColor = "Positive" text = "Comparisons"  key="3">
+	<viz:Popover id="idPopOver3"></viz:Popover>
+	<viz:VizFrame xmlns:viz="sap.viz.ui5.controls" id="idVizFrame3" uiConfig="{applicationSet:'fiori'}"
+		vizType="bar" height= "900px" width="100%">
+	      <viz:dataset>
+	        <dataSet:FlattenedDataset xmlns:dataSet="sap.viz.ui5.data" data="{salesvolumecomparison>/salesvolumecomparison}">
+	          <dataSet:dimensions>
+
+	              <dataSet:DimensionDefinition name="ItmsGrpNam" value="{salesvolumecomparison>ItmsGrpNam}">
+	              </dataSet:DimensionDefinition>
+
+
+
+
+	          </dataSet:dimensions>
+	          <dataSet:measures>
+
+
+
+	<dataSet:MeasureDefinition name="Total Cartons Current Year" value="{salesvolumecomparison>TotalCartonsCurrentYear}">
+</dataSet:MeasureDefinition>
+<dataSet:MeasureDefinition name="Total Cartons Last Year" value="{salesvolumecomparison>TotalCartonsLastYear}">
+</dataSet:MeasureDefinition>
+
+
+
+
+	          </dataSet:measures>
+	        </dataSet:FlattenedDataset>
+	      </viz:dataset>
+	      <viz:feeds>
+	        <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Total Cartons Current Year"/>
+	        <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Total Cartons Last Year"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="categoryAxis" type="Dimension" values="ItmsGrpNam"/>
+
+	      </viz:feeds>
+	    </viz:VizFrame>
+			<ScrollContainer
+				height="100%"
+				width="100%"
+				vertical="true"
+				focusable="true">
+			<Table id="salesvolumecomparison"
+			sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+			class = "sapUiSizeCompact"
+			noDataText = "Loading..."
+			items="{salesvolumecomparison>/salesvolumecomparison}">
+			<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title text="C.Y. = Current Year || L.Y. = Last Year" level="H2"/>
+					<ToolbarSpacer />
+
+
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+			<columns>
+			<Column width="150px"><Text text="Item Group" /></Column>
+			<Column width="67px"><Text text="Jan C.Y." /></Column>
+			<Column width="67px"><Text text="Jan L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+		<Column width="67px"><Text text="Feb C.Y." /></Column>
+			<Column width="67px"><Text text="Feb L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Mar C.Y." /></Column>
+			<Column width="67px"><Text text="Mar L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Apr C.Y." /></Column>
+			<Column width="67px"><Text text="Apr L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+
+			<Column width="67px"><Text text="May C.Y." /></Column>
+			<Column width="67px"><Text text="May L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="June C.Y." /></Column>
+			<Column width="67px"><Text text="June L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Jul C.Y." /></Column>
+			<Column width="67px"><Text text="Jul L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Aug C.Y." /></Column>
+			<Column width="67px"><Text text="Aug L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+
+			<Column width="67px"><Text text="Sep C.Y." /></Column>
+			<Column width="67px"><Text text="Sep L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Oct C.Y." /></Column>
+			<Column width="67px"><Text text="Oct L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Nov C.Y." /></Column>
+			<Column width="67px"><Text text="Nov L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Dec C.Y." /></Column>
+			<Column width="67px"><Text text="Dec L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="100px"><Text text="Total Cartons Current Year" /></Column>
+			<Column width="100px"><Text text="Total Cartons Last Year" /></Column>
+			<Column width="80px"><Text text="Total % up/down" /></Column>
+		<!--	<Column width="150px"><Text text="Item Group" /></Column>-->
+				</columns>
+		<items>
+		<ColumnListItem>
+		<cells>
+
+		<ObjectIdentifier title="{salesvolumecomparison>ItmsGrpNam}"/>
+		<Text text="{salesvolumecomparison>JanC}" />
+		<Text text="{salesvolumecomparison>JanL}" />
+
+		<ObjectNumber
+			number="{salesvolumecomparison>percentJan}"
+			 state ="{=${salesvolumecomparison>percentJan}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{salesvolumecomparison>FebC}" />
+		<Text text="{salesvolumecomparison>FebL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentFeb}"
+			 state ="{=${salesvolumecomparison>percentFeb}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{salesvolumecomparison>MarC}" />
+		<Text text="{salesvolumecomparison>MarL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentMar}"
+			 state ="{=${salesvolumecomparison>percentMar}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{salesvolumecomparison>AprC}" />
+		<Text text="{salesvolumecomparison>AprL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentApr}"
+			 state ="{=${salesvolumecomparison>percentApr}> '0' ? 'Success' : 'Error'}" />
+
+		<Text text="{salesvolumecomparison>MayC}" />
+		<Text text="{salesvolumecomparison>MayL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentMay}"
+			 state ="{=${salesvolumecomparison>percentMay}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{salesvolumecomparison>JuneC}" />
+		<Text text="{salesvolumecomparison>JuneL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentJune}"
+			 state ="{=${salesvolumecomparison>percentJune}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{salesvolumecomparison>JulC}" />
+		<Text text="{salesvolumecomparison>JulL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentJul}"
+			 state ="{=${salesvolumecomparison>percentJul}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{salesvolumecomparison>AugC}" />
+		<Text text="{salesvolumecomparison>AugL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentAug}"
+			 state ="{=${salesvolumecomparison>percentAug}> '0' ? 'Success' : 'Error'}" />
+
+		<Text text="{salesvolumecomparison>SepC}" />
+		<Text text="{salesvolumecomparison>SepL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentSep}"
+			 state ="{=${salesvolumecomparison>percentSep}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{salesvolumecomparison>OctC}" />
+		<Text text="{salesvolumecomparison>OctL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentOct}"
+			 state ="{=${salesvolumecomparison>percentOct}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{salesvolumecomparison>NovC}" />
+		<Text text="{salesvolumecomparison>NovL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentNov}"
+			 state ="{=${salesvolumecomparison>percentNov}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{salesvolumecomparison>DecC}" />
+		<Text text="{salesvolumecomparison>DecL}" />
+		<ObjectNumber
+			number="{salesvolumecomparison>percentDec}"
+			 state ="{=${salesvolumecomparison>percentDec}> '0' ? 'Success' : 'Error'}" />
+		<ObjectIdentifier title="{salesvolumecomparison>TotalCartonsCurrentYear}" />
+		<ObjectIdentifier title="{salesvolumecomparison>TotalCartonsLastYear}"/>
+		<ObjectNumber
+			number="{salesvolumecomparison>percent}"
+			 state ="{=${salesvolumecomparison>percent}> '0' ? 'Success' : 'Error'}" />
+			 <!--<ObjectIdentifier title="{salesvolumecomparison>ItmsGrpNam}"/>-->
+		</cells>
+</ColumnListItem>
+
+</items>
+</Table >
+</ScrollContainer>
+<Table id="salesvolumecomparison1"
+sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+class = "sapUiSizeCompact"
+noDataText = "Loading..."
+items="{salesvolumecomparison>/salesvolumecomparison1}">
+<columns>
+<Column
+>
+<Text text="" />
+</Column>
+<Column><Text text="Total Cartons Current Year" /></Column>
+<Column><Text text="Total Cartons Last Year" /></Column>
+	</columns>
+<items>
+<ColumnListItem>
+<cells>
+
+<ObjectIdentifier title="{salesvolumecomparison>Total}"/>
+<Text
+text="{salesvolumecomparison>TotalCartonsCurrentYear}" />
+<Text
+text="{salesvolumecomparison>TotalCartonsLastYear}"/>
+</cells>
+</ColumnListItem>
+</items>
+</Table >
+</IconTabFilter>
+
+<IconTabFilter icon="sap-icon://along-stacked-chart" iconColor = "Positive" text = "Yearly Sales"  key="4">
+
+<viz:Popover id="idPopOver4"></viz:Popover>
+<viz:VizFrame xmlns:viz="sap.viz.ui5.controls" id="idVizFrame4" uiConfig="{applicationSet:'fiori'}" vizType="bar" height= "900px" width="100%">
+<viz:dataset>
+<dataSet:FlattenedDataset xmlns:dataSet="sap.viz.ui5.data" data="{allsales>/allsales}">
+<dataSet:dimensions>
+
+	<dataSet:DimensionDefinition name="ItmsGrpNam" value="{allsales>ItmsGrpNam}">
+	</dataSet:DimensionDefinition>
+</dataSet:dimensions>
+<dataSet:measures>
+	<dataSet:MeasureDefinition name="2014" value="{allsales>2014}">
+	</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="2015" value="{allsales>2015}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="2016" value="{allsales>2016}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="2017" value="{allsales>2017}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="2018" value="{allsales>2018}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="2019" value="{allsales>2019}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="2020" value="{allsales>2020}">
+		</dataSet:MeasureDefinition>
+		</dataSet:measures>
+</dataSet:FlattenedDataset>
+</viz:dataset>
+<viz:feeds>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="2014"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="2015"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="2016"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="2017"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="2018"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="2019"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="2020"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="categoryAxis" type="Dimension" values="ItmsGrpNam"/>
+
+</viz:feeds>
+</viz:VizFrame>
+
+<Table id="yearlysales"
+sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+class = "sapUiSizeCompact"
+noDataText = "Loading..."
+items="{allsales>/allsales}">
+<columns>
+<Column
+>
+<Text text="Item Groups" />
+</Column>
+<Column><Text text="2014" /></Column>
+<Column><Text text="2015" /></Column>
+<Column><Text text="2016" /></Column>
+<Column><Text text="2017" /></Column>
+<Column><Text text="2018" /></Column>
+<Column><Text text="2019" /></Column>
+<Column><Text text="2020" /></Column>
+<Column><Text text="Total Cartons" /></Column>
+</columns>
+<items>
+<ColumnListItem>
+<cells>
+
+<ObjectIdentifier title="{allsales>ItmsGrpNam}"/>
+
+
+    <Text text="{allsales>2014}" visible ="{=${allsales>2014}!=='0.00'}"/>
+    <Text
+    text="{allsales>2015}"  visible ="{=${allsales>2015}!=='0.00'}" />
+    <Text
+    text="{allsales>2016}" visible ="{=${allsales>2016}!=='0.00'}" />
+    <Text
+    text="{allsales>2017}" visible ="{=${allsales>2017}!=='0.00'}"/>
+    <Text
+    text="{allsales>2018}" visible ="{=${allsales>2018}!=='0.00'}"/>
+    <Text
+    text="{allsales>2019}" visible ="{=${allsales>2019}!=='0.00'}"/>
+		<Text
+		text="{allsales>2020}" visible ="{=${allsales>2020}!=='0.00'}"/>
+    <ObjectIdentifier title="{allsales>TotalCartons}" visible ="{=${allsales>TotalCartons}!=='0.00'}"/>
+
+
+</cells>
+</ColumnListItem>
+</items>
+</Table >
+
+
+</IconTabFilter>
+<IconTabFilter icon="sap-icon://cart-5" iconColor = "Positive" text = "SKU Sales"  key="4">
+	<viz:Popover id="idPopOver5"></viz:Popover>
+	<viz:VizFrame xmlns:viz="sap.viz.ui5.controls" id="idVizFrame5" uiConfig="{applicationSet:'fiori'}"
+		vizType="stacked_bar" height= "900px" width="100%">
+	<viz:dataset>
+	<dataSet:FlattenedDataset xmlns:dataSet="sap.viz.ui5.data" data="{skus>/skus}">
+	<dataSet:dimensions>
+
+		<dataSet:DimensionDefinition name="ItemName" value="{skus>ItemName}">
+		</dataSet:DimensionDefinition>
+	</dataSet:dimensions>
+	<dataSet:measures>
+		<dataSet:MeasureDefinition name="Jan" value="{skus>Jan}">
+		</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="Feb" value="{skus>Feb}">
+			</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="Mar" value="{skus>Mar}">
+			</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="Apr" value="{skus>Apr}">
+			</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="May" value="{skus>May}">
+			</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="June" value="{skus>June}">
+			</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="Jul" value="{skus>Jul}">
+			</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="Aug" value="{skus>Aug}">
+			</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="Sep" value="{skus>Sep}">
+			</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="Oct" value="{skus>Oct}">
+			</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="Nov" value="{skus>Nov}">
+			</dataSet:MeasureDefinition>
+			<dataSet:MeasureDefinition name="Dec" value="{skus>Dec}">
+			</dataSet:MeasureDefinition>
+	</dataSet:measures>
+	</dataSet:FlattenedDataset>
+	</viz:dataset>
+	<viz:feeds>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Jan"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Feb"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Mar"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Apr"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="May"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="June"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Jul"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Aug"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Sep"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Oct"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Nov"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Dec"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="categoryAxis" type="Dimension" values="ItemName"/>
+
+	</viz:feeds>
+	</viz:VizFrame>
+
+	<ScrollContainer
+		height="100%"
+		width="100%"
+		vertical="true"
+		focusable="true">
+<Table id="skus"
+sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+class = "sapUiSizeCompact"
+noDataText = "Loading..."
+items="{skus>/skus}">
+<columns>
+<Column width = "85px"
+>
+<Text text="Item Group" />
+</Column>
+<!--<Column><Text text="Item Code" /></Column>-->
+<Column width = "240px"><Text text="Item Name" /></Column>
+<Column><Text text="Jan" /></Column>
+<Column><Text text="Feb" /></Column>
+<Column><Text text="March" /></Column>
+<Column><Text text="April" /></Column>
+<Column><Text text="May" /></Column>
+<Column><Text text="June" /></Column>
+<Column><Text text="July" /></Column>
+<Column><Text text="August" /></Column>
+<Column><Text text="Sep" /></Column>
+<Column><Text text="Oct" /></Column>
+<Column><Text text="Nov" /></Column>
+<Column><Text text="Dec" /></Column>
+<Column width = "85px"><Text text="Total Cartons" /></Column>
+</columns>
+<items>
+<ColumnListItem type = "Active" press = "showSKUs">
+<cells>
+
+<ObjectIdentifier title="{skus>ItmsGrpNam}"/>
+<!--<ObjectIdentifier title="{skus>ItemCode}"/>-->
+<ObjectIdentifier title="{skus>ItemName}"  />
+
+
+    <Text text="{skus>Jan}" visible ="{=${skus>Jan}!=='0.00'}"/>
+    <Text
+    text="{skus>Feb}"  visible ="{=${skus>Feb}!=='0.00'}" />
+    <Text
+    text="{skus>Mar}" visible ="{=${skus>Mar}!=='0.00'}" />
+    <Text
+    text="{skus>Apr}" visible ="{=${skus>Apr}!=='0.00'}"/>
+    <Text
+    text="{skus>May}" visible ="{=${skus>May}!=='0.00'}"/>
+    <Text
+    text="{skus>June}" visible ="{=${skus>June}!=='0.00'}"/>
+    <Text
+    text="{skus>Jul}" visible ="{=${skus>Jul}!=='0.00'}"/>
+    <Text
+    text="{skus>Aug}" visible ="{=${skus>Aug}!=='0.00'}"/>
+    <Text
+    text="{skus>Sep}" visible ="{=${skus>Sep}!=='0.00'}"/>
+    <Text
+    text="{skus>Oct}" visible ="{=${skus>Oct}!=='0.00'}"/>
+    <Text
+    text="{skus>Nov}" visible ="{=${skus>Nov}!=='0.00'}"/>
+    <Text
+    text="{skus>Dec}" visible ="{=${skus>Dec}!=='0.00'}"/>
+    <ObjectIdentifier title="{skus>TotalCartons}" visible ="{=${skus>TotalCartons}!=='0.00'}"/>
+
+
+</cells>
+</ColumnListItem>
+</items>
+</Table >
+</ScrollContainer>
+</IconTabFilter>
+<IconTabFilter icon="sap-icon://grid" iconColor = "Positive" text = "SKU Comparisons"  key="3">
+	<Button text="1" press="onSavePDF" />
+	<viz:Popover id="idPopOver6"></viz:Popover>
+	<viz:VizFrame xmlns:viz="sap.viz.ui5.controls" id="idVizFrame6" uiConfig="{applicationSet:'fiori'}" vizType="bar" height= "900px" width="100%">
+	      <viz:dataset>
+	        <dataSet:FlattenedDataset xmlns:dataSet="sap.viz.ui5.data" data="{skuscomparison>/skuscomparison}">
+	          <dataSet:dimensions>
+
+	              <dataSet:DimensionDefinition name="ItemName" value="{skuscomparison>ItemName}">
+	              </dataSet:DimensionDefinition>
+
+
+
+
+	          </dataSet:dimensions>
+	          <dataSet:measures>
+
+
+
+	<dataSet:MeasureDefinition name="Total Cartons Current Year" value="{skuscomparison>TotalCartonsCurrentYear}">
+</dataSet:MeasureDefinition>
+<dataSet:MeasureDefinition name="Total Cartons Last Year" value="{skuscomparison>TotalCartonsLastYear}">
+</dataSet:MeasureDefinition>
+
+
+
+
+	          </dataSet:measures>
+	        </dataSet:FlattenedDataset>
+	      </viz:dataset>
+	      <viz:feeds>
+	        <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Total Cartons Current Year"/>
+	        <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Total Cartons Last Year"/>
+	<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="categoryAxis" type="Dimension" values="ItemName"/>
+
+	      </viz:feeds>
+	    </viz:VizFrame>
+			<ScrollContainer
+				height="100%"
+				width="100%"
+				vertical="true"
+				focusable="true">
+				<Button icon="sap-icon://download" text="Download Table Below" press="onDataExport" tooltip="{i18n>download}" id="download"/>
+<Button	icon="sap-icon://download" press="onChartExport" />
+			<Table id="skuscomparison"
+			sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+			class = "sapUiSizeCompact"
+			noDataText = "Loading..."
+			items="{skuscomparison>/skuscomparison}">
+			<headerToolbar>
+
+			<OverflowToolbar>
+				<content>
+					<Title text="C.Y. = Current Year || L.Y. = Last Year" level="H2"/>
+					<ToolbarSpacer />
+
+			<Button	icon="sap-icon://download" press="onDataExport" />
+
+
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+			<columns>
+			<Column width="150px"><Text text="Item Name" /></Column>
+			<Column width="67px"><Text text="Jan C.Y." /></Column>
+			<Column width="67px"><Text text="Jan L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Feb C.Y." /></Column>
+			<Column width="67px"><Text text="Feb L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Mar C.Y." /></Column>
+			<Column width="67px"><Text text="Mar L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Apr C.Y." /></Column>
+			<Column width="67px"><Text text="Apr L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+
+			<Column width="67px"><Text text="May C.Y." /></Column>
+			<Column width="67px"><Text text="May L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="June C.Y." /></Column>
+			<Column width="67px"><Text text="June L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Jul C.Y." /></Column>
+			<Column width="67px"><Text text="Jul L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Aug C.Y." /></Column>
+			<Column width="67px"><Text text="Aug L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+
+			<Column width="67px"><Text text="Sep C.Y." /></Column>
+			<Column width="67px"><Text text="Sep L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Oct C.Y." /></Column>
+			<Column width="67px"><Text text="Oct L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Nov C.Y." /></Column>
+			<Column width="67px"><Text text="Nov L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="67px"><Text text="Dec C.Y." /></Column>
+			<Column width="67px"><Text text="Dec L.Y." /></Column>
+			<Column width="80px"><Text text="% up/down" /></Column>
+			<Column width="100px"><Text text="Total Cartons Current Year" /></Column>
+			<Column width="100px"><Text text="Total Cartons Last Year" /></Column>
+			<Column width="80px"><Text text="Total % up/down" /></Column>
+			<Column width="150px"><Text text="Item Name" /></Column>
+				</columns>
+		<items>
+		<ColumnListItem>
+		<cells>
+
+		<ObjectIdentifier title="{skuscomparison>ItemName}"/>
+		<Text text="{skuscomparison>JanC}" />
+		<Text text="{skuscomparison>JanL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentJan}"
+			 state ="{=${skuscomparison>percentJan}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{skuscomparison>FebC}" />
+		<Text text="{skuscomparison>FebL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentFeb}"
+			 state ="{=${skuscomparison>percentFeb}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{skuscomparison>MarC}" />
+		<Text text="{skuscomparison>MarL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentMar}"
+			 state ="{=${skuscomparison>percentMar}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{skuscomparison>AprC}" />
+		<Text text="{skuscomparison>AprL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentApr}"
+			 state ="{=${skuscomparison>percentApr}> '0' ? 'Success' : 'Error'}" />
+
+		<Text text="{skuscomparison>MayC}" />
+		<Text text="{skuscomparison>MayL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentMay}"
+			 state ="{=${skuscomparison>percentMay}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{skuscomparison>JuneC}" />
+		<Text text="{skuscomparison>JuneL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentJune}"
+			 state ="{=${skuscomparison>percentJune}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{skuscomparison>JulC}" />
+		<Text text="{skuscomparison>JulL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentJul}"
+			 state ="{=${skuscomparison>percentJul}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{skuscomparison>AugC}" />
+		<Text text="{skuscomparison>AugL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentAug}"
+			 state ="{=${skuscomparison>percentAug}> '0' ? 'Success' : 'Error'}" />
+
+		<Text text="{skuscomparison>SepC}" />
+		<Text text="{skuscomparison>SepL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentSep}"
+			 state ="{=${skuscomparison>percentSep}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{skuscomparison>OctC}" />
+		<Text text="{skuscomparison>OctL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentOct}"
+			 state ="{=${skuscomparison>percentOct}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{skuscomparison>NovC}" />
+		<Text text="{skuscomparison>NovL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentNov}"
+			 state ="{=${skuscomparison>percentNov}> '0' ? 'Success' : 'Error'}" />
+		<Text text="{skuscomparison>DecC}" />
+		<Text text="{skuscomparison>DecL}" />
+		<ObjectNumber
+			number="{skuscomparison>percentDec}"
+			 state ="{=${skuscomparison>percentDec}> '0' ? 'Success' : 'Error'}" />
+		<ObjectIdentifier title="{skuscomparison>TotalCartonsCurrentYear}" />
+		<ObjectIdentifier title="{skuscomparison>TotalCartonsLastYear}"/>
+		<ObjectNumber
+			number="{skuscomparison>percent}"
+			 state ="{=${skuscomparison>percent}> '0' ? 'Success' : 'Error'}" />
+			 <ObjectIdentifier title="{skuscomparison>ItemName}"/>
+		</cells>
+</ColumnListItem>
+
+</items>
+</Table >
+</ScrollContainer>
+</IconTabFilter>
+<!--
+<IconTabFilter icon="sap-icon://grid" iconColor = "Warning" text = "SKU by Customer" >
+<ScrollContainer
+	height="100%"
+	width="100%"
+	vertical="true"
+	focusable="true">
+<Table id="customerItemsVolumes"
+sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+class = "sapUiSizeCompact"
+noDataText = "Loading...Too big to load. Requires RAM upgrade"
+items = "{
+path : 'customerItemsVolumes>/customerItemsVolumes',
+sorter : {
+path : 'CardName',
+group : true
+}
+}"
+
+>
+<columns>
+	<Column width = "240px"><Text text="Customer" /></Column>
+<Column width = "85px"
+>
+<Text text="Item Group" />
+</Column>
+<Column><Text text="Item Code" /></Column>
+<Column width = "240px"><Text text="Item Name" /></Column>
+<Column><Text text="Jan" /></Column>
+<Column><Text text="Feb" /></Column>
+<Column><Text text="Mar" /></Column>
+<Column><Text text="Apr" /></Column>
+<Column><Text text="May" /></Column>
+<Column><Text text="June" /></Column>
+<Column><Text text="July" /></Column>
+<Column><Text text="Aug" /></Column>
+<Column><Text text="Sep" /></Column>
+<Column><Text text="Oct" /></Column>
+<Column><Text text="Nov" /></Column>
+<Column><Text text="Dec" /></Column>
+<Column width = "85px"><Text text="Total Cartons" /></Column>
+</columns>
+<items>
+<ColumnListItem>
+<cells>
+<ObjectIdentifier title="{customerItemsVolumes>CardName}"/>
+<ObjectIdentifier title="{customerItemsVolumes>ItmsGrpNam}"/>
+
+<ObjectIdentifier title="{customerItemsVolumes>ItemCode}"/>
+<ObjectIdentifier title="{customerItemsVolumes>ItemName}"  />
+
+
+	<Text text="{customerItemsVolumes>Jan}" visible ="{=${customerItemsVolumes>Jan}!=='0.00'}"/>
+	<Text
+	text="{customerItemsVolumes>Feb}"  visible ="{=${customerItemsVolumes>Feb}!=='0.00'}" />
+	<Text
+	text="{customerItemsVolumes>Mar}" visible ="{=${customerItemsVolumes>Mar}!=='0.00'}" />
+	<Text
+	text="{customerItemsVolumes>Apr}" visible ="{=${customerItemsVolumes>Apr}!=='0.00'}"/>
+	<Text
+	text="{customerItemsVolumes>May}" visible ="{=${customerItemsVolumes>May}!=='0.00'}"/>
+	<Text
+	text="{customerItemsVolumes>June}" visible ="{=${customerItemsVolumes>June}!=='0.00'}"/>
+	<Text
+	text="{customerItemsVolumes>Jul}" visible ="{=${customerItemsVolumes>Jul}!=='0.00'}"/>
+	<Text
+	text="{customerItemsVolumes>Aug}" visible ="{=${customerItemsVolumes>Aug}!=='0.00'}"/>
+	<Text
+	text="{customerItemsVolumes>Sep}" visible ="{=${customerItemsVolumes>Sep}!=='0.00'}"/>
+	<Text
+	text="{customerItemsVolumes>Oct}" visible ="{=${customerItemsVolumes>Oct}!=='0.00'}"/>
+	<Text
+	text="{customerItemsVolumes>Nov}" visible ="{=${customerItemsVolumes>Nov}!=='0.00'}"/>
+	<Text
+	text="{customerItemsVolumes>Dec}" visible ="{=${customerItemsVolumes>Dec}!=='0.00'}"/>
+	<ObjectIdentifier title="{customerItemsVolumes>TotalCartons}" visible ="{=${customerItemsVolumes>TotalCartons}!=='0.00'}"/>
+
+
+</cells>
+</ColumnListItem>
+</items>
+</Table >
+</ScrollContainer>
+</IconTabFilter>
+
+-->
+
+
+
+<IconTabFilter icon="sap-icon://along-stacked-chart" iconColor = "Negative" text = "Regions">
+
+<viz:Popover id="idPopOver7"></viz:Popover>
+<viz:VizFrame xmlns:viz="sap.viz.ui5.controls" id="idVizFrame7" uiConfig="{applicationSet:'fiori'}" vizType="stacked_bar" height= "900px" width="100%">
+<viz:dataset>
+<dataSet:FlattenedDataset xmlns:dataSet="sap.viz.ui5.data" data="{region>/region}">
+<dataSet:dimensions>
+
+	<dataSet:DimensionDefinition name="REGION" value="{region>REGION}">
+	</dataSet:DimensionDefinition>
+</dataSet:dimensions>
+<dataSet:measures>
+	<dataSet:MeasureDefinition name="Jan" value="{region>Jan}">
+	</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Feb" value="{region>Feb}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Mar" value="{region>Mar}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Apr" value="{region>Apr}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="May" value="{region>May}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="June" value="{region>June}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Jul" value="{region>Jul}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Aug" value="{region>Aug}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Sep" value="{region>Sep}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Oct" value="{region>Oct}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Nov" value="{region>Nov}">
+		</dataSet:MeasureDefinition>
+		<dataSet:MeasureDefinition name="Dec" value="{region>Dec}">
+		</dataSet:MeasureDefinition>
+</dataSet:measures>
+</dataSet:FlattenedDataset>
+</viz:dataset>
+<viz:feeds>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Jan"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Feb"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Mar"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Apr"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="May"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="June"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Jul"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Aug"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Sep"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Oct"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Nov"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Dec"/>
+<feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="categoryAxis" type="Dimension" values="REGION"/>
+
+</viz:feeds>
+</viz:VizFrame>
+
+<Table id="region"
+sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+class = "sapUiSizeCompact"
+noDataText = "Loading..."
+items="{region>/region}">
+<columns>
+<Column
+>
+<Text text="Region" />
+</Column>
+<Column><Text text="Jan" /></Column>
+<Column><Text text="Feb" /></Column>
+<Column><Text text="March" /></Column>
+<Column><Text text="April" /></Column>
+<Column><Text text="May" /></Column>
+<Column><Text text="June" /></Column>
+<Column><Text text="July" /></Column>
+<Column><Text text="August" /></Column>
+<Column><Text text="Sep" /></Column>
+<Column><Text text="Oct" /></Column>
+<Column><Text text="Nov" /></Column>
+<Column><Text text="Dec" /></Column>
+<Column><Text text="Total Cartons" /></Column>
+</columns>
+<items>
+<ColumnListItem>
+<cells>
+
+<ObjectIdentifier title="{region>REGION}"/>
+
+
+    <Text text="{region>Jan}" visible ="{=${region>Jan}!=='0.00'}"/>
+    <Text
+    text="{region>Feb}"  visible ="{=${region>Feb}!=='0.00'}" />
+    <Text
+    text="{region>Mar}" visible ="{=${region>Mar}!=='0.00'}" />
+    <Text
+    text="{region>Apr}" visible ="{=${region>Apr}!=='0.00'}"/>
+    <Text
+    text="{region>May}" visible ="{=${region>May}!=='0.00'}"/>
+    <Text
+    text="{region>June}" visible ="{=${region>June}!=='0.00'}"/>
+    <Text
+    text="{region>Jul}" visible ="{=${region>Jul}!=='0.00'}"/>
+    <Text
+    text="{region>Aug}" visible ="{=${region>Aug}!=='0.00'}"/>
+    <Text
+    text="{region>Sep}" visible ="{=${region>Sep}!=='0.00'}"/>
+    <Text
+    text="{region>Oct}" visible ="{=${region>Oct}!=='0.00'}"/>
+    <Text
+    text="{region>Nov}" visible ="{=${region>Nov}!=='0.00'}"/>
+    <Text
+    text="{region>Dec}" visible ="{=${region>Dec}!=='0.00'}"/>
+    <ObjectIdentifier title="{region>TotalCartons}" visible ="{=${region>TotalCartons}!=='0.00'}"/>
+
+
+</cells>
+</ColumnListItem>
+</items>
+</Table >
+<Text text = "test" />
+<MessageView id = "sMessageView" items="{oLocalJSONModel>/messages}" noDataText = "huang">
+<MessageItem type="{oLocalJSONModel>type}" title="{oLocalJSONModel>title}" subtitle="{oLocalJSONModel>subtitle}" description="{oLocalJSONModel>description}"/>
+</MessageView>
+
+</IconTabFilter>
+</items>
+</IconTabBar>
+
+
+						<!--<footer>
+							<OverflowToolbar id="otbFlooterC">
+
+
+									</OverflowToolbar>
+					</footer>-->
+					</Page>
+
+	</mvc:View>

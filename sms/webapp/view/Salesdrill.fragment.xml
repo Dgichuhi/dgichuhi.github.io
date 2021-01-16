@@ -1,0 +1,145 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   	xmlns:l="sap.ui.layout"
+   xmlns:core="sap.ui.core"
+   xmlns:viz="sap.viz.ui5.controls"
+       xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+       xmlns:viz.data="sap.viz.ui5.data"
+   >
+   <Dialog
+     class="sapUiContentPadding"
+    contentWidth = "100%"
+    contentHeight ="100%"
+    draggable = "true"
+        id="salesdrillDialog"
+      title ="Sales volume details for {salesvolumedrill>ItmsGrpNam}. ({salesvolumedrill>TotalCartons} total cartons).">
+      <l:VerticalLayout
+
+  width="100%">
+  <l:content>
+<viz:Popover id="idPopOver2"></viz:Popover>
+    <viz:VizFrame xmlns:viz="sap.viz.ui5.controls" id="idVizFrame2" uiConfig="{applicationSet:'fiori'}" vizType="stacked_bar" height= "900px" width="100%">
+    <viz:dataset>
+    <dataSet:FlattenedDataset xmlns:dataSet="sap.viz.ui5.data" data="{salesvolumedrill>salesvolumedrill}">
+    <dataSet:dimensions>
+
+    	<dataSet:DimensionDefinition name="ItemName" value="{salesvolumedrill>ItemName}">
+    	</dataSet:DimensionDefinition>
+    </dataSet:dimensions>
+    <dataSet:measures>
+    	<dataSet:MeasureDefinition name="Jan" value="{salesvolumedrill>Jan}">
+    	</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="Feb" value="{salesvolumedrill>Feb}">
+    		</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="Mar" value="{salesvolumedrill>Mar}">
+    		</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="Apr" value="{salesvolumedrill>Apr}">
+    		</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="May" value="{salesvolumedrill>May}">
+    		</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="June" value="{salesvolumedrill>June}">
+    		</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="Jul" value="{salesvolumedrill>Jul}">
+    		</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="Aug" value="{salesvolumedrill>Aug}">
+    		</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="Sep" value="{salesvolumedrill>Sep}">
+    		</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="Oct" value="{salesvolumedrill>Oct}">
+    		</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="Nov" value="{salesvolumedrill>Nov}">
+    		</dataSet:MeasureDefinition>
+    		<dataSet:MeasureDefinition name="Dec" value="{salesvolumedrill>Dec}">
+    		</dataSet:MeasureDefinition>
+    </dataSet:measures>
+    </dataSet:FlattenedDataset>
+    </viz:dataset>
+    <viz:feeds>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Jan"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Feb"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Mar"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Apr"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="May"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="June"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Jul"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Aug"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Sep"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Oct"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Nov"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="valueAxis" type="Measure" values="Dec"/>
+    <feed:FeedItem xmlns:feed="sap.viz.ui5.controls.common.feeds" uid="categoryAxis" type="Dimension" values="ItemName"/>
+
+    </viz:feeds>
+    </viz:VizFrame>
+
+    <Table id="salesdrillfragment"
+    sticky="HeaderToolbar,InfoToolbar,ColumnHeaders"
+    class = "sapUiSizeCompact"
+    noDataText = "Loading..."
+    items="{salesvolumedrill>salesvolumedrill}">
+    <columns>
+    <Column width="10em"
+    >
+    <Text text="Item Name" />
+    </Column>
+    <Column><Text text="Jan" /></Column>
+    <Column><Text text="Feb" /></Column>
+    <Column><Text text="March" /></Column>
+    <Column><Text text="April" /></Column>
+    <Column><Text text="May" /></Column>
+    <Column><Text text="June" /></Column>
+    <Column><Text text="July" /></Column>
+    <Column><Text text="August" /></Column>
+    <Column><Text text="Sep" /></Column>
+    <Column><Text text="Oct" /></Column>
+    <Column><Text text="Nov" /></Column>
+    <Column><Text text="Dec" /></Column>
+    <Column><Text text="Total Cartons" /></Column>
+    </columns>
+    <items>
+    <ColumnListItem>
+    <cells>
+
+    <ObjectIdentifier title="{salesvolumedrill>ItemName}" text = "{salesvolumedrill>ItemCode}" />
+    <Text text="{salesvolumedrill>Jan}" visible ="{=${salesvolumedrill>Jan}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Feb}"  visible ="{=${salesvolumedrill>Feb}!=='0.00'}" />
+    <Text
+    text="{salesvolumedrill>Mar}" visible ="{=${salesvolumedrill>Mar}!=='0.00'}" />
+    <Text
+    text="{salesvolumedrill>Apr}" visible ="{=${salesvolumedrill>Apr}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>May}" visible ="{=${salesvolumedrill>May}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>June}" visible ="{=${salesvolumedrill>June}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Jul}" visible ="{=${salesvolumedrill>Jul}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Aug}" visible ="{=${salesvolumedrill>Aug}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Sep}" visible ="{=${salesvolumedrill>Sep}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Oct}" visible ="{=${salesvolumedrill>Oct}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Nov}" visible ="{=${salesvolumedrill>Nov}!=='0.00'}"/>
+    <Text
+    text="{salesvolumedrill>Dec}" visible ="{=${salesvolumedrill>Dec}!=='0.00'}"/>
+    <ObjectIdentifier title="{salesvolumedrill>TotalCartons}" visible ="{=${salesvolumedrill>TotalCartons}!=='0.00'}"/>
+
+    </cells>
+    </ColumnListItem>
+    </items>
+    </Table >
+
+
+  	</l:content>
+
+  </l:VerticalLayout>
+
+      <endButton>
+         <Button
+            text="Close"
+            press="salesdrillExit"/>
+      </endButton>
+   </Dialog>
+</core:FragmentDefinition>
