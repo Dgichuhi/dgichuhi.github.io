@@ -8,7 +8,7 @@ sap.ui.define([
 
 		metadata: {
 
-		"rootView": "knc.ppe.com.view.App",		// initial view
+		"rootView": "sap.ui.webapp.view.App",		// initial view
 
 		"routing": {
 			 "config": {
