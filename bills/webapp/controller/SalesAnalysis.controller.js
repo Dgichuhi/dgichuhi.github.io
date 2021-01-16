@@ -10,7 +10,7 @@ sap.ui.define([
 ], function (Controller, MessageToast,Popover,Button,ChartFormatter, Format,Export,ExportTypeCSV) {
 	"use strict";
 
-	return Controller.extend("knc.ppe.com.controller.SalesAnalysis", {
+	return Controller.extend("sap.ui.webapp.controller.SalesAnalysis", {
 onInit: function(){
 
 
@@ -338,7 +338,7 @@ oPopOver6.setFormatString(formatPattern6.STANDARDFLOAT);
 			// create dialog lazily
 			if (!oDialog) {
 				// create dialog via fragment factory
-				oDialog = sap.ui.xmlfragment(oView.getId(), "knc.ppe.com.view.Salesdrill", this);
+				oDialog = sap.ui.xmlfragment(oView.getId(), "sap.ui.webapp.controller.Salesdrill", this);
 				// connect dialog to view (models, lifecycle)
 				oView.addDependent(oDialog);
 			}
