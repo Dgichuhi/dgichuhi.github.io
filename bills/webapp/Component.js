@@ -83,6 +83,35 @@ sap.ui.define([
 		
 		var oModel = new sap.ui.model.json.JSONModel("model/data1.json");
 		oView.setModel(oModel);
+				var oModel4 = new sap.ui.model.json.JSONModel("model/salesvolume.json");
+oModel4.setSizeLimit(100000);
+oView.setModel(oModel4, "salesvolume");
+var oModel4 = new sap.ui.model.json.JSONModel("model/salesvolumeTotal.json");
+oModel4.setSizeLimit(100000);
+oView.setModel(oModel4, "salesvolumeTotal");
+var oModel4 = new sap.ui.model.json.JSONModel("model/salesvolumedrill.json");
+oModel4.setSizeLimit(100000);
+oView.setModel(oModel4, "salesvolumedrill");
+var oModel4 = new sap.ui.model.json.JSONModel("model/salesvolumecomparison.json");
+oModel4.setSizeLimit(100000);
+oView.setModel(oModel4, "salesvolumecomparison");
+var oModel4 = new sap.ui.model.json.JSONModel("model/allsales.json");
+oModel4.setSizeLimit(100000);
+oView.setModel(oModel4, "allsales");
+var oModel41 = new sap.ui.model.json.JSONModel("model/skus.json");
+oModel41.setSizeLimit(100000);
+oView.setModel(oModel41, "skus");
+var oModel42 = new sap.ui.model.json.JSONModel("model/skuscomparison.json");
+oModel42.setSizeLimit(100000);
+oView.setModel(oModel42, "skuscomparison");
+/*	var oModel4a = new sap.ui.model.json.JSONModel("model/customerItemsVolumes.json");
+oModel4a.setSizeLimit(100000);
+oView.setModel(oModel4a, "customerItemsVolumes");*/
+var oModel4a = new sap.ui.model.json.JSONModel("model/regions.json");
+oModel4a.setSizeLimit(100000);
+oView.setModel(oModel4a, "region");
+				
+				
 		
 		var i18nModel = new sap.ui.model.resource.ResourceModel({
             bundleName: "sap.ui.webapp.i18n.i18n"
