@@ -1,6 +1,6 @@
 <mvc:View
   height="100%"
-  controllerName="controller.Main"
+  controllerName="sap.ui.webapp.controller.Main"
    xmlns:core="sap.ui.core"
   xmlns:tnt="sap.tnt"
   xmlns:mvc="sap.ui.core.mvc"
