@@ -49,12 +49,13 @@
 							<Panel expandable="true" expanded="true"  headerText="Sample system. Have a look:" width="auto" class="sapUiResponsiveMargin" >
 
 	<Link 
-		text="Bills Management System "
+		text="Bills Management System   "
 		href="bills/webapp"
 		target="_blank" /> 
+							
 								
 	<Link 
-		text=" Student IS - Ongoing Work"
+		text=" || Sales"
 		href="sms/webapp"
 		target="_blank" />
 								
