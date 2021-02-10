@@ -131,7 +131,7 @@
     },
     {
       "counter": 4,
-      "ItmsGrpNam": "Green",
+      "ItmsGrpNam": "Group GN",
       "TotalCartonsCurrentYear": "2626.45",
       "TotalCartonsLastYear": "2659.25",
       "percent": "-1.23",
@@ -174,7 +174,7 @@
     },
     {
       "counter": 5,
-      "ItmsGrpNam": "Herbal",
+      "ItmsGrpNam": "Group HL",
       "TotalCartonsCurrentYear": "3632.42",
       "TotalCartonsLastYear": "2285.17",
       "percent": "58.96",
@@ -217,7 +217,7 @@
     },
     {
       "counter": 6,
-      "ItmsGrpNam": "Lemon",
+      "ItmsGrpNam": "Group LN",
       "TotalCartonsCurrentYear": "1645.10",
       "TotalCartonsLastYear": "1548.80",
       "percent": "6.22",
@@ -260,7 +260,7 @@
     },
     {
       "counter": 7,
-      "ItmsGrpNam": "Hibiscus",
+      "ItmsGrpNam": "Group HS",
       "TotalCartonsCurrentYear": "1946.90",
       "TotalCartonsLastYear": "1387.60",
       "percent": "40.31",
@@ -346,7 +346,7 @@
     },
     {
       "counter": 9,
-      "ItmsGrpNam": "Group Mint",
+      "ItmsGrpNam": "Group MT",
       "TotalCartonsCurrentYear": "1066.55",
       "TotalCartonsLastYear": "955.75",
       "percent": "11.59",
@@ -389,7 +389,7 @@
     },
     {
       "counter": 10,
-      "ItmsGrpNam": "Chamomile",
+      "ItmsGrpNam": "Group CE",
       "TotalCartonsCurrentYear": "1273.70",
       "TotalCartonsLastYear": "870.40",
       "percent": "46.34",
@@ -432,7 +432,7 @@
     },
     {
       "counter": 11,
-      "ItmsGrpNam": "Afya",
+      "ItmsGrpNam": "Group AA",
       "TotalCartonsCurrentYear": "322.66",
       "TotalCartonsLastYear": "842.12",
       "percent": "-61.68",
@@ -475,7 +475,7 @@
     },
     {
       "counter": 12,
-      "ItmsGrpNam": "Cinnamon",
+      "ItmsGrpNam": "Group CN",
       "TotalCartonsCurrentYear": "812.75",
       "TotalCartonsLastYear": "823.60",
       "percent": "-1.32",
@@ -518,7 +518,7 @@
     },
     {
       "counter": 13,
-      "ItmsGrpNam": "BlacK",
+      "ItmsGrpNam": "Group BK",
       "TotalCartonsCurrentYear": "3354.61",
       "TotalCartonsLastYear": "773.24",
       "percent": "333.84",
@@ -561,7 +561,7 @@
     },
     {
       "counter": 14,
-      "ItmsGrpNam": "Brown",
+      "ItmsGrpNam": "Group BN",
       "TotalCartonsCurrentYear": "967.50",
       "TotalCartonsLastYear": "739.42",
       "percent": "30.85",
@@ -604,7 +604,7 @@
     },
     {
       "counter": 15,
-      "ItmsGrpNam": "Vanilla",
+      "ItmsGrpNam": "GROUP VAN",
       "TotalCartonsCurrentYear": "446.00",
       "TotalCartonsLastYear": "603.50",
       "percent": "-26.10",
@@ -647,7 +647,7 @@
     },
     {
       "counter": 16,
-      "ItmsGrpNam": "Berry",
+      "ItmsGrpNam": "Group BY",
       "TotalCartonsCurrentYear": "531.20",
       "TotalCartonsLastYear": "452.30",
       "percent": "17.44",
@@ -690,7 +690,7 @@
     },
     {
       "counter": 17,
-      "ItmsGrpNam": "Kenya",
+      "ItmsGrpNam": "Group KQ",
       "TotalCartonsCurrentYear": "38.35",
       "TotalCartonsLastYear": "119.45",
       "percent": "-67.89",
@@ -733,7 +733,7 @@
     },
     {
       "counter": 18,
-      "ItmsGrpNam": "Cardamon",
+      "ItmsGrpNam": "Group CN",
       "TotalCartonsCurrentYear": "162.40",
       "TotalCartonsLastYear": "85.55",
       "percent": "89.83",
@@ -776,7 +776,7 @@
     },
     {
       "counter": 19,
-      "ItmsGrpNam": "Orthodox",
+      "ItmsGrpNam": "Group OX",
       "TotalCartonsCurrentYear": "0.56",
       "TotalCartonsLastYear": "0.00",
       "percent": "",
