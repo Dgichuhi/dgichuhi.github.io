@@ -87,7 +87,7 @@
     },
     {
       "counter": 6,
-      "ItmsGrpNam": "Green",
+      "ItmsGrpNam": "Group GN",
       "TotalCartons": "2626.45",
       "Jan": "117.50",
       "Feb": "159.15",
@@ -104,7 +104,7 @@
     },
     {
       "counter": 7,
-      "ItmsGrpNam": "Hibiscus",
+      "ItmsGrpNam": "Group HB",
       "TotalCartons": "1946.90",
       "Jan": "137.85",
       "Feb": "159.15",
@@ -121,7 +121,7 @@
     },
     {
       "counter": 8,
-      "ItmsGrpNam": "Lemon",
+      "ItmsGrpNam": "Group LM",
       "TotalCartons": "1645.10",
       "Jan": "93.60",
       "Feb": "89.65",
@@ -172,7 +172,7 @@
     },
     {
       "counter": 11,
-      "ItmsGrpNam": "Group Mint",
+      "ItmsGrpNam": "Group MT",
       "TotalCartons": "1066.55",
       "Jan": "52.05",
       "Feb": "60.95",
@@ -189,7 +189,7 @@
     },
     {
       "counter": 12,
-      "ItmsGrpNam": "Brown",
+      "ItmsGrpNam": "Group BR",
       "TotalCartons": "967.50",
       "Jan": "65.08",
       "Feb": "61.58",
@@ -206,7 +206,7 @@
     },
     {
       "counter": 13,
-      "ItmsGrpNam": "Cinnamon",
+      "ItmsGrpNam": "Group CN",
       "TotalCartons": "812.75",
       "Jan": "59.10",
       "Feb": "77.00",
@@ -223,7 +223,7 @@
     },
     {
       "counter": 14,
-      "ItmsGrpNam": "Berry",
+      "ItmsGrpNam": "Group BR",
       "TotalCartons": "531.20",
       "Jan": "36.65",
       "Feb": "61.25",
@@ -240,7 +240,7 @@
     },
     {
       "counter": 15,
-      "ItmsGrpNam": "Vanilla",
+      "ItmsGrpNam": "Group VAN",
       "TotalCartons": "446.00",
       "Jan": "32.50",
       "Feb": "31.10",
@@ -257,7 +257,7 @@
     },
     {
       "counter": 16,
-      "ItmsGrpNam": "Afya",
+      "ItmsGrpNam": "Group AY",
       "TotalCartons": "322.66",
       "Jan": "42.95",
       "Feb": "24.20",
@@ -291,7 +291,7 @@
     },
     {
       "counter": 18,
-      "ItmsGrpNam": "Kenya",
+      "ItmsGrpNam": "Group KQ",
       "TotalCartons": "38.35",
       "Jan": "4.95",
       "Feb": "8.25",
@@ -308,7 +308,7 @@
     },
     {
       "counter": 19,
-      "ItmsGrpNam": "Orthodox",
+      "ItmsGrpNam": "Group OXC",
       "TotalCartons": "0.56",
       "Jan": "0.00",
       "Feb": "0.00",
