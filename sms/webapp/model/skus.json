@@ -1,7 +1,7 @@
 {
   "skus": [
     {
-      "ItemName": "GROUP A LOOSE 250G",
+      "ItemName": "GROUP A SKU",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "8947.53",
       "Jan": "613.98",
@@ -18,7 +18,7 @@
       "Dec": "1038.58"
     },
     {
-      "ItemName": "GROUP A LOOSE 100G",
+      "ItemName": "GROUP A SKU 1G",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "8803.76",
       "Jan": "524.99",
@@ -52,7 +52,7 @@
       "Dec": "636.35"
     },
     {
-      "ItemName": "GROUP A LOOSE 50G",
+      "ItemName": "GROUP A 50G",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "6779.58",
       "Jan": "339.05",
@@ -69,7 +69,7 @@
       "Dec": "622.63"
     },
     {
-      "ItemName": "GROUP A LOOSE 500G",
+      "ItemName": "GROUP A 500G",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "6212.05",
       "Jan": "412.65",
@@ -103,7 +103,7 @@
       "Dec": "487.58"
     },
     {
-      "ItemName": "GROUP B LOOSE 250G",
+      "ItemName": "GROUP B 250G",
       "ItmsGrpNam": "GROUP B",
       "TotalCartons": "3801.08",
       "Jan": "210.63",
@@ -120,7 +120,7 @@
       "Dec": "460.53"
     },
     {
-      "ItemName": "GROUP B LOOSE 100G",
+      "ItemName": "GROUP B 100G",
       "ItmsGrpNam": "GROUP B",
       "TotalCartons": "3774.56",
       "Jan": "224.10",
@@ -137,8 +137,8 @@
       "Dec": "396.32"
     },
     {
-      "ItemName": "FLOW 200G",
-      "ItmsGrpNam": "Flow",
+      "ItemName": "FLW 200G",
+      "ItmsGrpNam": "Flw",
       "TotalCartons": "3495.67",
       "Jan": "211.58",
       "Feb": "241.50",
@@ -171,8 +171,8 @@
       "Dec": "190.13"
     },
     {
-      "ItemName": "HERBAL 200G",
-      "ItmsGrpNam": "Herbal",
+      "ItemName": "HBAL 200",
+      "ItmsGrpNam": "Hal",
       "TotalCartons": "2853.25",
       "Jan": "175.58",
       "Feb": "182.50",
@@ -188,8 +188,8 @@
       "Dec": "297.00"
     },
     {
-      "ItemName": "GREEN  25'S",
-      "ItmsGrpNam": "Green",
+      "ItemName": "GRN  25",
+      "ItmsGrpNam": "Group GN",
       "TotalCartons": "2626.45",
       "Jan": "117.50",
       "Feb": "159.15",
@@ -205,7 +205,7 @@
       "Dec": "313.20"
     },
     {
-      "ItemName": "GROUP A 100'S U",
+      "ItemName": "GROUP A 10 X",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "2006.40",
       "Jan": "162.40",
@@ -222,8 +222,8 @@
       "Dec": "275.70"
     },
     {
-      "ItemName": "HIBISCUS 20'S",
-      "ItmsGrpNam": "Hibiscus",
+      "ItemName": "HBX 20'S",
+      "ItmsGrpNam": "Group HBX",
       "TotalCartons": "1946.90",
       "Jan": "137.85",
       "Feb": "159.15",
@@ -239,7 +239,7 @@
       "Dec": "247.65"
     },
     {
-      "ItemName": "GROUP A 50'S U",
+      "ItemName": "GROUP AA 5",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "1786.05",
       "Jan": "137.65",
@@ -256,7 +256,7 @@
       "Dec": "236.15"
     },
     {
-      "ItemName": "GROUP A 100'S",
+      "ItemName": "GROUP A S",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "1736.30",
       "Jan": "118.80",
@@ -273,7 +273,7 @@
       "Dec": "242.00"
     },
     {
-      "ItemName": "LEMON 25'S",
+      "ItemName": "LEMON",
       "ItmsGrpNam": "Lemon",
       "TotalCartons": "1645.10",
       "Jan": "93.60",
@@ -290,7 +290,7 @@
       "Dec": "188.15"
     },
     {
-      "ItemName": "GROUP B LOOSE 50G",
+      "ItemName": "BANANA 50",
       "ItmsGrpNam": "GROUP B",
       "TotalCartons": "1630.66",
       "Jan": "99.68",
@@ -307,7 +307,7 @@
       "Dec": "164.82"
     },
     {
-      "ItemName": "GROUP A 50'S",
+      "ItemName": "PLUMS",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "1556.85",
       "Jan": "118.30",
@@ -324,7 +324,7 @@
       "Dec": "202.85"
     },
     {
-      "ItemName": "GROUP B 100'S",
+      "ItemName": "PEAS",
       "ItmsGrpNam": "GROUP B",
       "TotalCartons": "1277.00",
       "Jan": "135.90",
@@ -341,8 +341,8 @@
       "Dec": "164.90"
     },
     {
-      "ItemName": "CHAMOMILE 25'S",
-      "ItmsGrpNam": "Chamomile",
+      "ItemName": "AVOCADO",
+      "ItmsGrpNam": "AVOCADO GROUP",
       "TotalCartons": "1273.70",
       "Jan": "76.50",
       "Feb": "81.40",
@@ -358,8 +358,8 @@
       "Dec": "146.25"
     },
     {
-      "ItemName": "LEMON & GROUP A  20'S",
-      "ItmsGrpNam": "LemonN",
+      "ItemName": "PUMPKINS",
+      "ItmsGrpNam": "GROUP PS",
       "TotalCartons": "1249.40",
       "Jan": "92.30",
       "Feb": "96.20",
@@ -375,7 +375,7 @@
       "Dec": "117.85"
     },
     {
-      "ItemName": "BLACK LOOSE 250G",
+      "ItemName": "BLACK A",
       "ItmsGrpNam": "Black",
       "TotalCartons": "1228.13",
       "Jan": "74.50",
@@ -392,8 +392,8 @@
       "Dec": "133.85"
     },
     {
-      "ItemName": "GREEN  & MINT 20'S",
-      "ItmsGrpNam": "Green & Mint",
+      "ItemName": "GM",
+      "ItmsGrpNam": "GM",
       "TotalCartons": "1066.55",
       "Jan": "52.05",
       "Feb": "60.95",
@@ -409,7 +409,7 @@
       "Dec": "132.85"
     },
     {
-      "ItemName": "BROWN 1KG",
+      "ItemName": "MAIZE 1KG",
       "ItmsGrpNam": "Brown",
       "TotalCartons": "967.50",
       "Jan": "65.08",
@@ -426,7 +426,7 @@
       "Dec": "81.21"
     },
     {
-      "ItemName": "GROUP B 50'S",
+      "ItemName": "BEANS",
       "ItmsGrpNam": "GROUP B",
       "TotalCartons": "843.05",
       "Jan": "84.70",
@@ -443,8 +443,8 @@
       "Dec": "76.90"
     },
     {
-      "ItemName": "CINNAMON",
-      "ItmsGrpNam": "Cinnamon",
+      "ItemName": "PEAS AA",
+      "ItmsGrpNam": "PEAS",
       "TotalCartons": "812.75",
       "Jan": "59.10",
       "Feb": "77.00",
@@ -460,8 +460,8 @@
       "Dec": "80.10"
     },
     {
-      "ItemName": "HERBAL 500G",
-      "ItmsGrpNam": "Herbal",
+      "ItemName": "HBAL",
+      "ItmsGrpNam": "Hbal",
       "TotalCartons": "779.17",
       "Jan": "48.08",
       "Feb": "58.50",
@@ -494,7 +494,7 @@
       "Dec": "81.10"
     },
     {
-      "ItemName": "BLACK LOOSE 100G",
+      "ItemName": "BLACK 100",
       "ItmsGrpNam": "Black",
       "TotalCartons": "698.88",
       "Jan": "58.91",
@@ -511,8 +511,8 @@
       "Dec": "51.96"
     },
     {
-      "ItemName": "BERRY 25's",
-      "ItmsGrpNam": "Berry",
+      "ItemName": "BY 25's",
+      "ItmsGrpNam": "By",
       "TotalCartons": "531.20",
       "Jan": "36.65",
       "Feb": "61.25",
@@ -545,8 +545,8 @@
       "Dec": "78.05"
     },
     {
-      "ItemName": "VANILLA 25'S",
-      "ItmsGrpNam": "Vanilla",
+      "ItemName": "VAN 25'S",
+      "ItmsGrpNam": "Van",
       "TotalCartons": "446.00",
       "Jan": "32.50",
       "Feb": "31.10",
@@ -562,7 +562,7 @@
       "Dec": "53.80"
     },
     {
-      "ItemName": "BLACK LOOSE 50G",
+      "ItemName": "BLACK 50G",
       "ItmsGrpNam": "Black",
       "TotalCartons": "406.93",
       "Jan": "19.26",
@@ -579,7 +579,7 @@
       "Dec": "13.30"
     },
     {
-      "ItemName": "GROUP B 25'S",
+      "ItemName": "GROUP B 25",
       "ItmsGrpNam": "GROUP B",
       "TotalCartons": "329.50",
       "Jan": "29.60",
@@ -613,7 +613,7 @@
       "Dec": "9.00"
     },
     {
-      "ItemName": "AFYA 250GM",
+      "ItemName": "AA GM",
       "ItmsGrpNam": "Afya",
       "TotalCartons": "190.03",
       "Jan": "21.25",
@@ -630,8 +630,8 @@
       "Dec": "19.30"
     },
     {
-      "ItemName": "CARDAMON  25's",
-      "ItmsGrpNam": "Cardamon",
+      "ItemName": "CN  25",
+      "ItmsGrpNam": "CN",
       "TotalCartons": "162.40",
       "Jan": "12.15",
       "Feb": "10.55",
@@ -647,7 +647,7 @@
       "Dec": "8.80"
     },
     {
-      "ItemName": "BLACK  CATERING PACK 100s U",
+      "ItemName": "BLACK U",
       "ItmsGrpNam": "Black",
       "TotalCartons": "146.85",
       "Jan": "0.00",
@@ -664,8 +664,8 @@
       "Dec": "22.50"
     },
     {
-      "ItemName": "AFYA 100GM",
-      "ItmsGrpNam": "Afya",
+      "ItemName": "AA 1GM",
+      "ItmsGrpNam": "Aa",
       "TotalCartons": "126.12",
       "Jan": "20.70",
       "Feb": "9.31",
@@ -681,7 +681,7 @@
       "Dec": "10.31"
     },
     {
-      "ItemName": "GROUP A SATCHET 25g",
+      "ItemName": "GROUP A 5g",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "117.21",
       "Jan": "0.00",
@@ -698,7 +698,7 @@
       "Dec": "15.06"
     },
     {
-      "ItemName": "BLACK  50s U",
+      "ItemName": "BLACK  5s U",
       "ItmsGrpNam": "Black",
       "TotalCartons": "116.80",
       "Jan": "0.00",
@@ -715,7 +715,7 @@
       "Dec": "11.20"
     },
     {
-      "ItemName": "GROUP A LOOSE 100G 1/2 CARTON",
+      "ItemName": "GROUP A 100G 1/",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "40.00",
       "Jan": "0.00",
@@ -749,7 +749,7 @@
       "Dec": "0.85"
     },
     {
-      "ItemName": "GROUP A LOOSE 50G 1/2 CARTON",
+      "ItemName": "GROUP A 50G 1/2",
       "ItmsGrpNam": "GROUP A",
       "TotalCartons": "20.00",
       "Jan": "0.00",
@@ -766,7 +766,7 @@
       "Dec": "20.00"
     },
     {
-      "ItemName": "BLACK LOOSE 2.5KG",
+      "ItemName": "BLACK 2KGS",
       "ItmsGrpNam": "Black",
       "TotalCartons": "20.00",
       "Jan": "0.00",
@@ -800,8 +800,8 @@
       "Dec": "-0.20"
     },
     {
-      "ItemName": "AFYA 50GM",
-      "ItmsGrpNam": "Afya",
+      "ItemName": "AA 1110GM",
+      "ItmsGrpNam": "Aa",
       "TotalCartons": "6.31",
       "Jan": "1.00",
       "Feb": "0.91",
@@ -817,8 +817,8 @@
       "Dec": "6.96"
     },
     {
-      "ItemName": "PURPLE ORTHODOX 15'S",
-      "ItmsGrpNam": "Orthodox",
+      "ItemName": "PURPLE 15'S",
+      "ItmsGrpNam": "Ox",
       "TotalCartons": "0.56",
       "Jan": "0.00",
       "Feb": "0.00",
@@ -834,8 +834,8 @@
       "Dec": "0.56"
     },
     {
-      "ItemName": "AFYA SATCHET 10g",
-      "ItmsGrpNam": "Afya",
+      "ItemName": "SATCHET 10g",
+      "ItmsGrpNam": "Aa",
       "TotalCartons": "0.20",
       "Jan": "0.00",
       "Feb": "0.00",
@@ -851,8 +851,8 @@
       "Dec": "0.00"
     },
     {
-      "ItemName": "GREEN ORTHODOX 15'S",
-      "ItmsGrpNam": "Orthodox",
+      "ItemName": "GN S",
+      "ItmsGrpNam": "Ox",
       "TotalCartons": "0.00",
       "Jan": "0.00",
       "Feb": "0.00",
@@ -868,8 +868,8 @@
       "Dec": "0.00"
     },
     {
-      "ItemName": "BLACK ORTHODOX 15'S",
-      "ItmsGrpNam": "Orthodox",
+      "ItemName": "BK OX 15",
+      "ItmsGrpNam": "Ox",
       "TotalCartons": "0.00",
       "Jan": "0.00",
       "Feb": "0.00",
@@ -885,7 +885,7 @@
       "Dec": "0.00"
     },
     {
-      "ItemName": "GROUP B LOOSE 500G",
+      "ItemName": "GROUP B 500G",
       "ItmsGrpNam": "GROUP C",
       "TotalCartons": "-0.25",
       "Jan": "-0.05",
