@@ -140,7 +140,7 @@
       "2020": "322.66",
       "counter": 11,
       "ItmsGrpCod": "111",
-      "ItmsGrpNam": "Afya",
+      "ItmsGrpNam": "Group AF",
       "TotalCartons": "4241.00"
     },
     {
@@ -153,7 +153,7 @@
       "2020": "446.00",
       "counter": 12,
       "ItmsGrpCod": "118",
-      "ItmsGrpNam": "Vanilla",
+      "ItmsGrpNam": "Group V",
       "TotalCartons": "4096.20"
     },
     {
@@ -166,7 +166,7 @@
       "2020": "1066.55",
       "counter": 13,
       "ItmsGrpCod": "143",
-      "ItmsGrpNam": "Mint",
+      "ItmsGrpNam": "Group MT",
       "TotalCartons": "3982.95"
     },
     {
@@ -179,7 +179,7 @@
       "2020": "1249.40",
       "counter": 14,
       "ItmsGrpCod": "151",
-      "ItmsGrpNam": "Lemon",
+      "ItmsGrpNam": "Group LM",
       "TotalCartons": "3819.80"
     },
     {
@@ -205,7 +205,7 @@
       "2020": "531.20",
       "counter": 16,
       "ItmsGrpCod": "150",
-      "ItmsGrpNam": "Berry",
+      "ItmsGrpNam": "Group BR",
       "TotalCartons": "1577.00"
     },
     {
@@ -218,7 +218,7 @@
       "2020": "162.40",
       "counter": 17,
       "ItmsGrpCod": "144",
-      "ItmsGrpNam": "Cardamon",
+      "ItmsGrpNam": "Group CM",
       "TotalCartons": "753.65"
     },
     {
@@ -231,7 +231,7 @@
       "2020": "38.35",
       "counter": 18,
       "ItmsGrpCod": "114",
-      "ItmsGrpNam": "Kenya",
+      "ItmsGrpNam": "Group East",
       "TotalCartons": "619.73"
     },
     {
@@ -270,7 +270,7 @@
       "2020": "0.56",
       "counter": 21,
       "ItmsGrpCod": "154",
-      "ItmsGrpNam": "Orthodox",
+      "ItmsGrpNam": "Group OX",
       "TotalCartons": "0.56"
     },
     {
@@ -283,7 +283,7 @@
       "2020": "0.00",
       "counter": 22,
       "ItmsGrpCod": "120",
-      "ItmsGrpNam": "Nettle",
+      "ItmsGrpNam": "Group NT",
       "TotalCartons": "-10.25"
     }
   ]
